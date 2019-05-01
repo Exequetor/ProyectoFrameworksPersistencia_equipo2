@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="contextUtm">
+    <jdbcConnection
+	    connectionURL="jdbc:mysql://localhost:3306/utm"
+	    driverClass="com.mysql.jdbc.Driver"
+	    password="" userId="root"
+    />
+    <javaModelGenerator
+	    targetPackage="cursoNTecnologias.bd.domain"
+	    targetProject="Proyecto"
+    />
+    <sqlMapGenerator
+	    targetPackage="cursoNTecnologias.bd.mappers"
+	    targetProject="Proyecto"
+    />
+    <table schema="utm" tableName="Cliente">
+      <columnOverride
+	      column="usActualColumnsNames"
+	      property="true"
+      />
+    </table>
+    <table schema="utm" tableName="detalleventas">
+      <columnOverride
+	      column="usActualColumnsNames"
+	      property="true"
+      />
+    </table>
+    <table schema="utm" tableName="direccion">
+      <columnOverride
+	      column="usActualColumnsNames"
+	      property="true"
+      />
+    </table>
+    <table schema="utm" tableName="ganancias">
+      <columnOverride
+	      column="usActualColumnsNames"
+	      property="true"
+      />
+    </table>
+    <table schema="utm" tableName="marcas">
+      <columnOverride
+	      column="usActualColumnsNames"
+	      property="true"
+      />
+    </table>
+    <table schema="utm" tableName="productos">
+      <columnOverride
+	      column="usActualColumnsNames"
+	      property="true"
+      />
+    </table>
+    <table schema="utm" tableName="ventas">
+      <columnOverride
+	      column="usActualColumnsNames"
+	      property="true"
+      />
+    </table>
+  </context>
+</generatorConfiguration>

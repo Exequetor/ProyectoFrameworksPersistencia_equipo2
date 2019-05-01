@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cursoNTecnologias.bd.mappers.ClienteMapper">
+	<!-- Base result -->
+  <resultMap id="BaseResultMap" type="cursoNTecnologias.bd.domain.Cliente">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="nombre" jdbcType="VARCHAR" property="nombre" />
+    <result column="apellido" jdbcType="VARCHAR" property="apellido" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="sexo" jdbcType="VARCHAR" property="sexo" />
+    <result column="idDireccion" jdbcType="INTEGER" property="iddireccion" />
+  </resultMap>
+  
+  <resultMap id="resultClienteDireccion" type="cursoNTecnologias.bd.domain.Cliente">
+  	<id column="id" jdbcType="INTEGER" property="id" />
+    <result column="nombre" jdbcType="VARCHAR" property="nombre" />
+    <result column="apellido" jdbcType="VARCHAR" property="apellido" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="sexo" jdbcType="VARCHAR" property="sexo" />
+    <result column="idDireccion" jdbcType="INTEGER" property="iddireccion" />
+  	<association property="direccion" column="idDireccion" resultMap="cursoNTecnologias.bd.mappers.DireccionMapper.BaseResultMap"/>
+  </resultMap>
+  
+  <select id="listarTodosClientes" resultMap="BaseResultMap">
+  	select * from cliente
+  </select>
+  <select id="listarTodosClientesDireccion" resultMap="resultClienteDireccion">
+  	select * from cliente inner join direccion where cliente.idDireccion = direccion.idDireccion
+  </select>
+  <select id="clienteDireccion" resultMap="resultClienteDireccion" parameterType="cursoNTecnologias.bd.domain.Cliente">
+  	select * from cliente as c inner join direccion as d where c.idDireccion = d.idDireccion and id=#{id}
+  </select>
+</mapper>
