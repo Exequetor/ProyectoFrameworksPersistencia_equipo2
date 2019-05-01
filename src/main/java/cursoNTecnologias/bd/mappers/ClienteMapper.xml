@@ -27,7 +27,9 @@
   <select id="listarTodosClientesDireccion" resultMap="resultClienteDireccion">
   	select * from cliente inner join direccion where cliente.idDireccion = direccion.idDireccion
   </select>
-  <select id="clienteDireccion" resultMap="resultClienteDireccion" parameterType="cursoNTecnologias.bd.domain.Cliente">
+  <!-- En parameterType se puede referenciar un objeto como tipo dentro del proyecto, por ejemplo
+  	   parameterType="cursoNTecnologias.bd.domain.Cliente" -->
+  <select id="clienteDireccion" resultMap="resultClienteDireccion" parameterType="Integer">
   	select * from cliente as c inner join direccion as d where c.idDireccion = d.idDireccion and id=#{id}
   </select>
 </mapper>

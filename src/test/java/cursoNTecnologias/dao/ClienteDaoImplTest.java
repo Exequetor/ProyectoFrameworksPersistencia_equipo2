@@ -31,9 +31,7 @@ public class ClienteDaoImplTest {
 			clienteDao.listarTodosClientesDireccion();
 			//System.out.println("Test consultar 1 cliente");
 			System.out.println("\nConsultar el cliente y su dirección con ID = 1");
-			Cliente cliente = new Cliente ();
-			cliente.setId(1);
-			clienteDao.clienteDireccion(cliente);
+			clienteDao.clienteDireccion(1);
 			
 		} catch (Exception ex) {
 			System.out.println("Error: " + ex);

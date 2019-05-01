@@ -58,11 +58,11 @@ public class ClienteDaoImpl implements ClienteDao, Serializable {
 	}
 	
 	@Override
-	public Cliente clienteDireccion(Cliente c) {
+	public Cliente clienteDireccion(Integer id) {
 		Cliente cliente = null;
 		try {
 			ClienteMapper clienteMapper = sqlSession.getMapper(ClienteMapper.class);
-			cliente = clienteMapper.clienteDireccion(c);
+			cliente = clienteMapper.clienteDireccion(id);
 			System.out.println("Id: " + cliente.getId());
 			System.out.println("Nombre: " + cliente.getNombre());
 			System.out.println("Calle: " + cliente.getDireccion().getCalle());
