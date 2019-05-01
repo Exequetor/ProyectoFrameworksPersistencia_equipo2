@@ -22,7 +22,6 @@ public class ClienteDaoImpl implements ClienteDao, Serializable {
 		this.sqlSession = sqlSession;
 	}
 	
-	@Override
 	public List<Cliente> listarTodosClientes () {
 		List<Cliente> list = null;
 		try {
@@ -38,8 +37,7 @@ public class ClienteDaoImpl implements ClienteDao, Serializable {
 		}
 		return null;
 	}
-
-	@Override
+	
 	public List<Cliente> listarTodosClientesDireccion() {
 		List<Cliente> list = null;
 		try {
@@ -57,7 +55,6 @@ public class ClienteDaoImpl implements ClienteDao, Serializable {
 		return null;
 	}
 	
-	@Override
 	public Cliente clienteDireccion(Integer id) {
 		Cliente cliente = null;
 		try {
