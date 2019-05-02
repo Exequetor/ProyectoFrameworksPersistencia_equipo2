@@ -8,4 +8,5 @@ public interface ClienteMapper {
 	List <Cliente> listarTodosClientes();
 	List <Cliente> listarTodosClientesDireccion();
 	Cliente clienteDireccion(Integer id);
+	void insertarCliente(Cliente cliente);
 }

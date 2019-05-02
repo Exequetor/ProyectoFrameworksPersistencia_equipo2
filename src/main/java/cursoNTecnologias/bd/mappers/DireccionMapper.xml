@@ -16,4 +16,10 @@
     <result column="pais" jdbcType="VARCHAR" property="pais" />
     <result column="codigoPostal" jdbcType="INTEGER" property="codigopostal" />
   </resultMap>
+	<select id="direccionId" resultMap="BaseResultMap" parameterType="Integer">
+	SELECT * from direccion WHERE idDireccion = #{id}
+	</select>
 </mapper>
+
+
+	

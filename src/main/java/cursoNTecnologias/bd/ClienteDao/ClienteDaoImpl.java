@@ -69,4 +69,15 @@ public class ClienteDaoImpl implements ClienteDao, Serializable {
 		}
 		return null;
 	}
+	public void insertarCliente(Cliente cliente){
+		try {
+			ClienteMapper clienteMapper = sqlSession.getMapper(ClienteMapper.class);
+			clienteMapper.insertarCliente(cliente);
+			System.out.println("Id: " + cliente.getId());
+			System.out.println("Nombre: " + cliente.getNombre());
+		} catch (Exception e) {
+			System.out.println("Error: " + e);
+		}
+		
+	}
 }

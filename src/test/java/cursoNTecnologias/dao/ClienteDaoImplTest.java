@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -21,7 +22,7 @@ public class ClienteDaoImplTest {
 	@Inject
 	ClienteDao clienteDao;
 
-	@Test
+	@Ignore
 	public void pruebaConsultarTodo() {
 		try {
 			System.out.println("Test consultar todos los clientes");
@@ -34,6 +35,24 @@ public class ClienteDaoImplTest {
 			clienteDao.clienteDireccion(1);
 			
 		} catch (Exception ex) {
+			System.out.println("Error: " + ex);
+		}
+	}
+	
+	@Test
+	public void insertarClienteNuevo(){
+		try{
+			Cliente cliente = new Cliente();
+			cliente.setNombre("Ivan");
+			cliente.setApellido("Mtz");
+			cliente.setEmail("mtz@gmail.com");
+			cliente.setSexo("Masculino");
+			cliente.setIddireccion(1);
+			
+			clienteDao.insertarCliente(cliente);
+			
+		}
+		catch (Exception ex) {
 			System.out.println("Error: " + ex);
 		}
 	}

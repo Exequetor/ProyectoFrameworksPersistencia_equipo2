@@ -32,4 +32,15 @@
   <select id="clienteDireccion" resultMap="resultClienteDireccion" parameterType="Integer">
   	select * from cliente as c inner join direccion as d where c.idDireccion = d.idDireccion and id=#{id}
   </select>
+  
+  <insert id="insertarCliente" parameterType="cursoNTecnologias.bd.domain.Cliente" >
+  INSERT INTO cliente(nombre, apellido, email, sexo, idDireccion) 
+  VALUES
+  (#{nombre}, #{apellido}, #{email}, #{sexo}, #{iddireccion})
+  </insert>
+  
+  
+  
+  
+  
 </mapper>
