@@ -39,7 +39,6 @@ public class ClienteDaoImplTest {
 		}
 	}
 	
-	@Test
 	public void insertarClienteNuevo(){
 		try{
 			Cliente cliente = new Cliente();
@@ -56,4 +55,33 @@ public class ClienteDaoImplTest {
 			System.out.println("Error: " + ex);
 		}
 	}
+	
+	public void eliminarCliente(){
+		try{
+			clienteDao.eliminarCliente(5);
+			
+		}
+		catch (Exception ex) {
+			System.out.println("Error: " + ex);
+		}
+	}
+	@Test
+	public void actualizarCliente(){
+		try{
+			Cliente cliente=new Cliente();
+			cliente.setNombre("Liz Velia");
+			cliente.setApellido("Robles Robles");
+			cliente.setEmail("lvmrobles@gmail.com");
+			cliente.setSexo("Femenino");
+			cliente.setIddireccion(1);
+			cliente.setId(1);
+			clienteDao.actualizarCliente(cliente);
+		}
+		catch (Exception ex) {
+			System.out.println("Error: " + ex);
+		}
+	}
+	
+	
+	
 }

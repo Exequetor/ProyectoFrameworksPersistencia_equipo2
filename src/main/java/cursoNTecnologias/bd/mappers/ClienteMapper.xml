@@ -39,8 +39,16 @@
   (#{nombre}, #{apellido}, #{email}, #{sexo}, #{iddireccion})
   </insert>
   
+  <delete id="eliminarCliente" parameterType="cursoNTecnologias.bd.domain.Cliente">
+  DELETE FROM cliente 
+  WHERE id = #{id}
+  </delete>
   
-  
+  <update id="actualizarCliente" parameterType="cursoNTecnologias.bd.domain.Cliente">
+  UPDATE cliente SET 
+  nombre=#{nombre}, apellido=#{apellido},email=#{email},sexo=#{sexo},idDireccion=#{iddireccion} 
+  WHERE id=#{id}
+  </update>
   
   
 </mapper>
