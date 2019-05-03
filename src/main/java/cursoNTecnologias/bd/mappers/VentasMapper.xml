@@ -8,7 +8,7 @@
     <result column="fecha" jdbcType="DATE" property="fecha" />
   </resultMap>
   
-  <resultMap id="consultarVenta" type="cursoNTecnologias.bd.domain.Ventas">
+  <resultMap id="consultarVentaByIdCliente" type="cursoNTecnologias.bd.domain.Ventas">
   	<id column="idVenta" jdbcType="INTEGER" property="idventa" />
     <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
     <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
