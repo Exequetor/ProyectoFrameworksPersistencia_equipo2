@@ -63,6 +63,21 @@ public class Productos {
      *
      * @mbg.generated Fri Apr 12 07:54:51 CDT 2019
      */
+    
+    private Marcas marcas;
+    
+    public Productos() {
+    	setMarcas(new Marcas());
+    }
+    
+    public void setMarcas(Marcas marcas) {
+    	this.marcas=marcas;
+    }
+    public Marcas getMarcas() {
+    	return marcas;
+    }
+    
+    
     public Integer getIdproducto() {
         return idproducto;
     }

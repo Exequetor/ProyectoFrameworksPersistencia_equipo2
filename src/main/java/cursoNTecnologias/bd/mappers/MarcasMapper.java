@@ -2,6 +2,8 @@ package cursoNTecnologias.bd.mappers;
 
 import java.util.List;
 
+import cursoNTecnologias.bd.domain.Marcas;
+
 public interface MarcasMapper {
-	List <MarcasMapper> listarMarcas ();
+	Marcas marcaId(Integer id);
 }
