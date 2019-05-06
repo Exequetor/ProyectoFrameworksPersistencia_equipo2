@@ -34,7 +34,7 @@ public class VentasDaoImpl implements VentasDao {
 		return null;
 	}
 
-	public void insertarVenta(Integer idCliente, List<Productos> productos) {
+	public void insertVenta(Integer idCliente, List<Productos> productos) {
 		try {
 			double totalPrecio = 0;
 			double totalVenta = 0;
@@ -86,19 +86,14 @@ public class VentasDaoImpl implements VentasDao {
 				dventasMapper.insertDetalleVentas(dventas);
 			}
 			
-			System.out.println("idVenta generado: " + venta.getIdventa());
+			System.out.println("\nidVenta generado: " + venta.getIdventa());
 			System.out.println("clienteId: " + venta.getClienteid());
 			System.out.println("totalVenta: " + venta.getTotalventa());
 			System.out.println("totalPrecio: " + totalPrecio);
 			System.out.println("totalGanancia: " + (totalVenta - totalPrecio));
 		} catch (Exception e) {
-			System.out.println("Error: " + e);
+			System.out.println("Error en VentaasDaoImpl: ");
+			e.printStackTrace();
 		}
 	}
-
-	public void insertarVenta() {
-		// TODO Auto-generated method stub
-		
-	}
-
 }

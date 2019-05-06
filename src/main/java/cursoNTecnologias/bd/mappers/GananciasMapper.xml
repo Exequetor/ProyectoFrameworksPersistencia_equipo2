@@ -11,6 +11,6 @@
   <insert id="insertarGanancias" parameterType="cursoNTecnologias.bd.domain.Ganancias" >
 	  INSERT INTO ganancias (ventaId, totalGanancia) 
 	  VALUES
-	  (#{ventaId}, #{totalGanancia})
+	  (#{ventaid}, #{totalganancia})
   </insert>
 </mapper>

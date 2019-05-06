@@ -9,6 +9,6 @@
   <insert id="insertDetalleVentas" parameterType="cursoNTecnologias.bd.domain.DetalleVentas" useGeneratedKeys="true" keyProperty="id">
 	  INSERT INTO detalleventas (ventaId, productoId, cantidad) 
 	  VALUES
-	  (#{ventaId}, #{productoId}, #{cantidad})
+	  (#{ventaid}, #{productoid}, #{cantidad})
   </insert>
 </mapper>
