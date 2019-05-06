@@ -20,7 +20,7 @@ public class DetalleVentasDaoImpl implements DetalleVentasDao {
 	public void insertarDetalleVentas(DetalleVentas dventas) {
 		try {
 			DetalleVentasMapper detalleVentasMapper = sqlSession.getMapper(DetalleVentasMapper.class);
-			detalleVentasMapper.insertarDetalleVentas(dventas);
+			detalleVentasMapper.insertDetalleVentas(dventas);
 			//System.out.println("Id: " + cliente.getId());
 			System.out.println("idVenta: " + dventas.getVentaid());
 			System.out.println("productoId: " + dventas.getProductoid());

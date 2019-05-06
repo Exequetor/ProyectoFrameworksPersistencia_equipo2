@@ -5,5 +5,5 @@ import cursoNTecnologias.bd.domain.DetalleVentas;
 
 public interface DetalleVentasMapper {
 	DetalleVentas listarDetalleVentasByIdVenta ();
-	void insertarDetalleVentas(DetalleVentas dventas);
+	void insertDetalleVentas(DetalleVentas dventas);
 }

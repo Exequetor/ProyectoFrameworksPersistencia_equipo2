@@ -6,7 +6,7 @@
     <result column="productoId" jdbcType="INTEGER" property="productoid" />
     <result column="cantidad" jdbcType="INTEGER" property="cantidad" />
   </resultMap>
-  <insert id="insertarGanancias" parameterType="cursoNTecnologias.bd.domain.DetalleVentas" >
+  <insert id="insertDetalleVentas" parameterType="cursoNTecnologias.bd.domain.DetalleVentas" useGeneratedKeys="true" keyProperty="id">
 	  INSERT INTO detalleventas (ventaId, productoId, cantidad) 
 	  VALUES
 	  (#{ventaId}, #{productoId}, #{cantidad})
