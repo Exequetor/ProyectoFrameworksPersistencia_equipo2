@@ -22,7 +22,7 @@ public class ClienteDaoImplTest {
 	@Inject
 	ClienteDao clienteDao;
 
-	@Ignore
+	@Test
 	public void pruebaConsultarTodo() {
 		try {
 			System.out.println("Test consultar todos los clientes");
@@ -38,7 +38,7 @@ public class ClienteDaoImplTest {
 			System.out.println("Error: " + ex);
 		}
 	}
-	
+	@Ignore
 	public void insertarClienteNuevo(){
 		try{
 			Cliente cliente = new Cliente();
@@ -55,7 +55,7 @@ public class ClienteDaoImplTest {
 			System.out.println("Error: " + ex);
 		}
 	}
-	
+	@Test
 	public void eliminarCliente(){
 		try{
 			clienteDao.eliminarCliente(5);
@@ -65,7 +65,7 @@ public class ClienteDaoImplTest {
 			System.out.println("Error: " + ex);
 		}
 	}
-	@Test
+	@Ignore
 	public void actualizarCliente(){
 		try{
 			Cliente cliente=new Cliente();

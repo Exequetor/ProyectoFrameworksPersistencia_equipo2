@@ -16,4 +16,9 @@
     <association property="cliente" column="clienteId" resultMap="cursoNTecnologias.bd.mappers.ClienteMapper.resultClienteDireccion"/>
   </resultMap>
   
+  	<insert id="insertAuthor" useGeneratedKeys="true" keyProperty="idVenta" parameterType="cursoNTecnologias.bd.domain.Ventas">
+	  insert into ventas (clienteId, totalVenta)
+	  values (#{clienteId},#{totalVenta})
+	</insert>
+  
 </mapper>

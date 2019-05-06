@@ -7,4 +7,6 @@ import cursoNTecnologias.bd.domain.Ventas;
 public interface VentasDao {
 	List<Ventas> listarTodasVentas();
 	Ventas ventaClienteById();
+	void insertarVenta();
+	
 }
