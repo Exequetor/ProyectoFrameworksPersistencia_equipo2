@@ -20,7 +20,7 @@ import cursoNTecnologias.bd.domain.Productos;
 public class ProductosDaoImplTest {
 	@Inject
 	ProductosDao productosDao;
-	@Test
+	
 	public void listarTodosProductos() {
 		try {
 			System.out.println("Test consultar todos los productos");
@@ -32,13 +32,13 @@ public class ProductosDaoImplTest {
 	@Test
 	public void listarTodosProductosMarca() {
 		try {
-			System.out.println("Test consultar todos los productos con su marca");
+			System.out.println("\nTest consultar todos los productos con su marca");
 			productosDao.listarTodosProductosMarca();
 		} catch (Exception ex) {
 			System.out.println("Error: " + ex);
 		}
 	}
-	@Test
+	
 	public void productoMarca() {
 		try {
 			System.out.println("Test consultar unsolo producto con su marca");
@@ -47,7 +47,7 @@ public class ProductosDaoImplTest {
 			System.out.println("Error: " + ex);
 		}
 	}
-	@Test
+	
 	public void updateProducto(){
 		System.out.println("Actualizando un producto.");
 		try{
@@ -74,7 +74,7 @@ public class ProductosDaoImplTest {
 			System.out.println("Error: " + ex);
 		}
 	}
-	@Test
+	
 	public void agregaProductoNuevo(){
 		try{
 			System.out.println("Agregando un nuevo producto");

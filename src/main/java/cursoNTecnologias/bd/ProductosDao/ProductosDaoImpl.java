@@ -24,7 +24,7 @@ public class ProductosDaoImpl implements ProductosDao{
 			ProductosMapper productoMapper = sqlSession.getMapper(ProductosMapper.class);
 			list = productoMapper.listarTodosProductosMarca();
 			for(Productos p:list) {
-				System.out.println("Id: "+ p.getIdproducto() );
+				System.out.println("\nId: "+ p.getIdproducto() );
 				System.out.println("Nombre: "+ p.getNombre() );
 				System.out.println("Precio: "+ p.getPrecio() );
 				System.out.println("Precio venta: "+ p.getPreciovta());

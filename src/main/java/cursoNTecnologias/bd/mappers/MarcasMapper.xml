@@ -7,8 +7,24 @@
   </resultMap>
   
   
-  <select id="marcaId" resultMap="BaseResultMap" parameterType="Integer">
+  <select id="obtenerMarcaId" resultMap="BaseResultMap" parameterType="Integer">
 	SELECT * from marcas WHERE idMarca = #{id}
   </select>
-	
+  
+  <select id="obtenerTodasMarca" resultMap="BaseResultMap" >
+	SELECT * from marcas 
+  </select>
+  
+  <insert id="agregarMarca" parameterType="cursoNTecnologias.bd.domain.Marcas">
+  	INSERT INTO marcas(nombreMarca) VALUES (#{nombremarca})
+  </insert>
+  
+  <delete id="deleteMarca" parameterType="Integer">
+  	delete from marcas where idMarca=#{idmarca}
+  </delete>
+  
+  <update id="updateMarca" parameterType="cursoNTecnologias.bd.domain.Marcas">
+  	update marcas  set nombreMarca=#{nombremarca} where idMarca= #{idmarca}
+  </update>
+  
 </mapper>
