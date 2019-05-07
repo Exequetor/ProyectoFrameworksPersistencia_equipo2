@@ -15,7 +15,7 @@
 	SELECT * from marcas 
   </select>
   
-  <insert id="agregarMarca" parameterType="cursoNTecnologias.bd.domain.Marcas">
+  <insert id="agregarMarca" useGeneratedKeys="true" keyProperty="idmarca" parameterType="cursoNTecnologias.bd.domain.Marcas">
   	INSERT INTO marcas(nombreMarca) VALUES (#{nombremarca})
   </insert>
   

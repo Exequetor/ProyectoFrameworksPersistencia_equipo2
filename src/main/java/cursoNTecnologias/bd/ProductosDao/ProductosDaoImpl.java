@@ -5,8 +5,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import cursoNTecnologias.bd.domain.Cliente;
+import cursoNTecnologias.bd.domain.Marcas;
 import cursoNTecnologias.bd.domain.Productos;
 import cursoNTecnologias.bd.mappers.ClienteMapper;
+import cursoNTecnologias.bd.mappers.MarcasMapper;
 import cursoNTecnologias.bd.mappers.ProductosMapper;
 
 @Named
@@ -100,20 +102,42 @@ public class ProductosDaoImpl implements ProductosDao{
 		return null;
 	}
 
-	public void agregarProducto(Productos p){
+	public void agregarProducto(Productos p,String m){
 		try {
-			System.out.println("Agregando un nuevo producto");
+			System.out.println("\nAgregando un nuevo producto\n\t Agregando la marca");
+			Marcas marca= new Marcas();
+			marca.setIdmarca(1);
+			marca.setNombremarca(m);
+			
+			MarcasMapper marcaMapper = sqlSession.getMapper(MarcasMapper.class);
+			marcaMapper.agregarMarca(marca);
+			
+			int idRetornado= marca.getIdmarca();
+			p.setMarcaid(idRetornado);
+			
+			System.out.println("\tAgregando datos producto");
 			ProductosMapper productoMapper = sqlSession.getMapper(ProductosMapper.class);
 			productoMapper.agregarProducto(p);
-			System.out.println("Id: " + p.getIdproducto());
-			System.out.println("Nombre: " + p.getNombre());
 		} catch (Exception e) {
 			System.out.println("Error: " + e);
 		}
 		
 	}
+
+
+	@Override
+	public void agregarProducto(Productos p) {
+		// TODO Auto-generated method stub
+		System.out.println("Id: " + p.getIdproducto());
+		System.out.println("Nombre: " + p.getNombre());
+	}
+
+
+	@Override
 	public Productos listarUnProducto(Productos p) {
 		// TODO Auto-generated method stub
 		return null;
 	}
+
+
 }

@@ -79,13 +79,13 @@ public class ProductosDaoImplTest {
 		try{
 			System.out.println("Agregando un nuevo producto");
 			Productos producto = new Productos();
-			producto.setNombre("Smartwatch");
-			producto.setPrecio(3500.0);
-			producto.setPreciovta(4000.0);
-			producto.setMarcaid(4);
-			producto.setCantidad(10);
+			producto.setNombre("Kit de limpieza PC");
+			producto.setPrecio(300.0);
+			producto.setPreciovta(550.0);
+			producto.setMarcaid(0);
+			producto.setCantidad(25);
 			
-			productosDao.agregarProducto(producto);
+			productosDao.agregarProducto(producto,"Krizkal");
 			
 		}
 		catch (Exception ex) {
