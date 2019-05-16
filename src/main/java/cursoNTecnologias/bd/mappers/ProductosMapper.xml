@@ -48,6 +48,6 @@
   	</update>
   
  	<delete id="deleteProducto" parameterType="cursoNTecnologias.bd.domain.Productos">
- 	 delete from productos where id = #{idproducto}
+ 	 delete from productos where idproducto = #{idproducto}
 	</delete>
 </mapper>
