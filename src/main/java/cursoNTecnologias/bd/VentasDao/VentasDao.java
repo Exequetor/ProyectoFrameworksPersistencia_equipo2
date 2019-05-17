@@ -6,8 +6,25 @@ import cursoNTecnologias.bd.domain.Productos;
 import cursoNTecnologias.bd.domain.Ventas;
 
 public interface VentasDao {
-	List<Ventas> listarTodasVentas();
-	Ventas ventaClienteById();
-	void insertVenta(Integer idCliente, List<Productos> productos);
+	/**
+	 * Consultas
+	 */
+	public List<Ventas> queryAllVentas();
+	public List<Ventas> queryVentasByVentaId();
+	public List<Ventas> queryVentasByClienteId();
 	
+	/**
+	 * Insert
+	 */
+	public void insertVenta(Integer idCliente, List<Productos> productos);
+	
+	/**
+	 * Update
+	 */
+	public void updateVentas(Ventas ventas);
+	
+	/**
+	 * Delete
+	 */
+	public void deleteVentasByVentasId(Integer ventasId);
 }

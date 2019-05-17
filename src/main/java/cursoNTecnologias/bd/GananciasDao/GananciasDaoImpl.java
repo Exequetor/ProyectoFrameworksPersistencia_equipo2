@@ -1,5 +1,8 @@
 package cursoNTecnologias.bd.GananciasDao;
 
+import java.io.Serializable;
+import java.util.List;
+
 import javax.inject.Named;
 
 import org.apache.ibatis.session.SqlSession;
@@ -9,18 +12,33 @@ import cursoNTecnologias.bd.domain.Ganancias;
 import cursoNTecnologias.bd.mappers.GananciasMapper;
 
 @Named
-public class GananciasDaoImpl implements GananciasDao {
+public class GananciasDaoImpl implements GananciasDao, Serializable {
 
+	private static final long serialVersionUID = -7305475619834562523L;
+	
 	SqlSession sqlSession;
 	@Autowired
 	public void setSqlSession(SqlSession sqlSession){
 		this.sqlSession= sqlSession;
 	}
+
+	@Override
+	public List<Ganancias> queryAllGanancias() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Ganancias> queryGananciasByVentaId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
-	public void insertarGanancias(Ganancias ganancias) {
+	@Override
+	public void insertGanancias(Ganancias ganancias) {
 		try {
 			GananciasMapper gananciasMapper = sqlSession.getMapper(GananciasMapper.class);
-			gananciasMapper.insertarGanancias(ganancias);
+			gananciasMapper.insertGanancias(ganancias);
 			//System.out.println("Id: " + cliente.getId());
 			System.out.println("idVenta: " + ganancias.getVentaid());
 			System.out.println("Total ganancia: " + ganancias.getTotalganancia());
@@ -28,5 +46,33 @@ public class GananciasDaoImpl implements GananciasDao {
 			System.out.println("Error: " + e);
 		}
 	}
+	
+	@Override
+	public void updateGanancias(Ganancias ganancia) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteGananciasByGananciasId(Integer gananciaId) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	/**
+	 * Consultas
+	 */
+	
+	/**
+	 * Insert
+	 */
+	
+	/**
+	 * Update
+	 */
+	
+	/**
+	 * Delete
+	 */
 
 }

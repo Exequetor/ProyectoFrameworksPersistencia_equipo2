@@ -8,7 +8,7 @@
     <result column="fecha" jdbcType="DATE" property="fecha" />
   </resultMap>
   
-  <insert id="insertarGanancias" parameterType="cursoNTecnologias.bd.domain.Ganancias" >
+  <insert id="insertGanancias" parameterType="cursoNTecnologias.bd.domain.Ganancias" >
 	  INSERT INTO ganancias (ventaId, totalGanancia) 
 	  VALUES
 	  (#{ventaid}, #{totalganancia})

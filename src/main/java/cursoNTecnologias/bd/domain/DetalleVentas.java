@@ -36,6 +36,22 @@ public class DetalleVentas {
      *
      * @mbg.generated Fri Apr 12 07:54:51 CDT 2019
      */
+    
+    private Productos producto;
+    
+    public DetalleVentas() {
+    	setProducto(new Productos ());
+    }
+    
+    public Productos getProducto() {
+		return producto;
+	}
+
+	public void setProducto(Productos producto) {
+		this.producto = producto;
+	}
+
+    
     public Integer getVentaid() {
         return ventaid;
     }

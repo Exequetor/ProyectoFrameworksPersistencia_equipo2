@@ -1,5 +1,6 @@
 package cursoNTecnologias.bd.VentasDao;
 
+import java.io.Serializable;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -9,36 +10,50 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import cursoNTecnologias.bd.DetalleVentasDao.DetalleVentasDao;
+import cursoNTecnologias.bd.GananciasDao.GananciasDao;
 import cursoNTecnologias.bd.domain.DetalleVentas;
 import cursoNTecnologias.bd.domain.Ganancias;
 import cursoNTecnologias.bd.domain.Productos;
 import cursoNTecnologias.bd.domain.Ventas;
-import cursoNTecnologias.bd.mappers.DetalleVentasMapper;
-import cursoNTecnologias.bd.mappers.GananciasMapper;
+
 import cursoNTecnologias.bd.mappers.VentasMapper;
 
 @Named
-public class VentasDaoImpl implements VentasDao {
+public class VentasDaoImpl implements VentasDao, Serializable {
+
+	private static final long serialVersionUID = -6330217361276954662L;
 
 	SqlSession sqlSession;
 	
 	@Inject
 	DetalleVentasDao dVentasDao;
+	@Inject
+	GananciasDao gananciasDao;
+	
 	@Autowired
 	public void setSqlSession(SqlSession sqlSession){
 		this.sqlSession= sqlSession;
 	}
 	
-	public List<Ventas> listarTodasVentas() {
+	@Override
+	public List<Ventas> queryAllVentas() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	public Ventas ventaClienteById() {
+	@Override
+	public List<Ventas> queryVentasByVentaId() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+	@Override
+	public List<Ventas> queryVentasByClienteId() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
+	@Override
 	public void insertVenta(Integer idCliente, List<Productos> productos) {
 		try {
 			double totalPrecio = 0;
@@ -75,8 +90,7 @@ public class VentasDaoImpl implements VentasDao {
 			Ganancias ganancia = new Ganancias ();
 			ganancia.setTotalganancia(totalVenta - totalPrecio);
 			ganancia.setVentaid(idRetornado);
-			GananciasMapper gananciasMapper = sqlSession.getMapper(GananciasMapper.class);
-			gananciasMapper.insertarGanancias(ganancia);
+			gananciasDao.insertGanancias(ganancia);
 			
 			/**
 			 * Insertamos todos los registros de detalle ventas.
@@ -88,7 +102,7 @@ public class VentasDaoImpl implements VentasDao {
 				dventas.setVentaid(idRetornado);
 				dventas.setProductoid(producto.getIdproducto());
 				dventas.setCantidad(producto.getCantidad());
-				dVentasDao.insertarDetalleVentas(dventas);
+				dVentasDao.insertDetalleVentas(dventas);
 			}
 			
 			System.out.println("\nidVenta generado: " + venta.getIdventa());
@@ -100,5 +114,17 @@ public class VentasDaoImpl implements VentasDao {
 			System.out.println("Error en VentaasDaoImpl: ");
 			e.printStackTrace();
 		}
+	}
+
+	@Override
+	public void updateVentas(Ventas ventas) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteVentasByVentasId(Integer ventasId) {
+		// TODO Auto-generated method stub
+		
 	}
 }

@@ -5,15 +5,21 @@
     <id column="ventaId" jdbcType="INTEGER" property="ventaid" />
     <result column="productoId" jdbcType="INTEGER" property="productoid" />
     <result column="cantidad" jdbcType="INTEGER" property="cantidad" />
+    
+    <association property="producto" column="productoId" resultMap="cursoNTecnologias.bd.mappers.ProductosMapper.BaseResultMap" />
   </resultMap>
   
-  <resultMap id="BaseResultMapByProductId" type="cursoNTecnologias.bd.domain.DetalleVentas">
-    <id column="ventaId" jdbcType="INTEGER" property="ventaid" />
-    <result column="productoId" jdbcType="INTEGER" property="productoid" />
-    <result column="cantidad" jdbcType="INTEGER" property="cantidad" />
-    
-    <association property="Producto" column="productoId" resultMap="cursoNTecnologias.bd.mappers.DetalleVentas"/>
-  </resultMap>
+  <select id="queryAllDetalleVentasProductos" resultMap="BaseResultMap" parameterType="Integer">
+  	SELECT * FROM detalleventas as dv
+  	INNER JOIN productos as p
+  	WHERE dv.productoId = p.idProducto
+  </select>
+  
+  <select id="queryDetalleVentasProductosByVentaId" resultMap="BaseResultMap" parameterType="Integer">
+  	SELECT * FROM detalleventas as dv
+  	INNER JOIN productos as p
+  	WHERE dv.productoId = p.idProducto AND dv.id = #{id}
+  </select>
   
   <insert id="insertDetalleVentas" parameterType="cursoNTecnologias.bd.domain.DetalleVentas" useGeneratedKeys="true" keyProperty="id">
 	  INSERT INTO detalleventas (ventaId, productoId, cantidad) 
