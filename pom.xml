@@ -4,11 +4,11 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <modelVersion>4.0.0</modelVersion>
   <parent>
     <groupId>cursoNTecnologias</groupId>
-    <artifactId>ProyectoFrameworksCentral</artifactId>
+    <artifactId>ProyectoFrameworksCentral_equipo2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <groupId>ProyectoFrameworksPersistencia</groupId>
-  <artifactId>ProyectoFrameworksPersistencia</artifactId>
+  <groupId>ProyectoFrameworksPersistencia_equipo2</groupId>
+  <artifactId>ProyectoFrameworksPersistencia_equipo2</artifactId>
   
   <url>http://maven.apache.org</url>
   <properties>
