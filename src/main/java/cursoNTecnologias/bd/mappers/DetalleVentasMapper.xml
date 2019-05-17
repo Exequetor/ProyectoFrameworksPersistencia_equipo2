@@ -6,6 +6,15 @@
     <result column="productoId" jdbcType="INTEGER" property="productoid" />
     <result column="cantidad" jdbcType="INTEGER" property="cantidad" />
   </resultMap>
+  
+  <resultMap id="BaseResultMap" type="cursoNTecnologias.bd.domain.DetalleVentas">
+    <id column="ventaId" jdbcType="INTEGER" property="ventaid" />
+    <result column="productoId" jdbcType="INTEGER" property="productoid" />
+    <result column="cantidad" jdbcType="INTEGER" property="cantidad" />
+    
+    <association property="Producto" column="productoId" resultMap="cursoNTecnologias.bd.mappers.DetalleVentas"/>
+  </resultMap>
+  
   <insert id="insertDetalleVentas" parameterType="cursoNTecnologias.bd.domain.DetalleVentas" useGeneratedKeys="true" keyProperty="id">
 	  INSERT INTO detalleventas (ventaId, productoId, cantidad) 
 	  VALUES

@@ -2,11 +2,13 @@ package cursoNTecnologias.bd.VentasDao;
 
 import java.util.List;
 
+import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import cursoNTecnologias.bd.DetalleVentasDao.DetalleVentasDao;
 import cursoNTecnologias.bd.domain.DetalleVentas;
 import cursoNTecnologias.bd.domain.Ganancias;
 import cursoNTecnologias.bd.domain.Productos;
@@ -19,6 +21,9 @@ import cursoNTecnologias.bd.mappers.VentasMapper;
 public class VentasDaoImpl implements VentasDao {
 
 	SqlSession sqlSession;
+	
+	@Inject
+	DetalleVentasDao dVentasDao;
 	@Autowired
 	public void setSqlSession(SqlSession sqlSession){
 		this.sqlSession= sqlSession;
@@ -76,14 +81,14 @@ public class VentasDaoImpl implements VentasDao {
 			/**
 			 * Insertamos todos los registros de detalle ventas.
 			 */
-			DetalleVentasMapper dventasMapper = sqlSession.getMapper(DetalleVentasMapper.class);
+			//DetalleVentasMapper dventasMapper = sqlSession.getMapper(DetalleVentasMapper.class);
 			DetalleVentas dventas;
 			for (Productos producto : productos) {
 				dventas = new DetalleVentas();
 				dventas.setVentaid(idRetornado);
 				dventas.setProductoid(producto.getIdproducto());
 				dventas.setCantidad(producto.getCantidad());
-				dventasMapper.insertDetalleVentas(dventas);
+				dVentasDao.insertarDetalleVentas(dventas);
 			}
 			
 			System.out.println("\nidVenta generado: " + venta.getIdventa());

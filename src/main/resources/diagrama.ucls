@@ -5,7 +5,7 @@
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/ClienteDao/ClienteDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="171" width="233" x="6133" y="518"/>    
+    <position height="171" width="233" x="1679" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -16,351 +16,511 @@
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/ClienteDao/ClienteDaoImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="233" x="6133" y="37"/>    
+    <position height="189" width="233" x="1744" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="cursoNTecnologias.bd.dao.Productos.ProductosDaoImpl" 
-    project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/dao/Productos/ProductosDaoImpl.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="225" width="214" x="5879" y="37"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </class>  
-  <interface id="4" language="java" name="cursoNTecnologias.bd.dao.Productos.ProductosDao" 
-    project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/dao/Productos/ProductosDao.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="214" x="5879" y="518"/>    
-    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
-      sort-features="false" accessors="true" visibility="true">      
-      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
-      <operations public="true" package="true" protected="true" private="true" static="true"/>    
-    </display>  
-  </interface>  
-  <interface id="5" language="java" name="cursoNTecnologias.bd.DetalleVentasDao.DetalleVentasDao" 
+  <interface id="3" language="java" name="cursoNTecnologias.bd.DetalleVentasDao.DetalleVentasDao" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/DetalleVentasDao/DetalleVentasDao.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="226" x="6406" y="518"/>    
+    <position height="81" width="226" x="41" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="6" language="java" name="cursoNTecnologias.bd.DetalleVentasDao.DetalleVentasDaoImpl" 
+  <class id="4" language="java" name="cursoNTecnologias.bd.DetalleVentasDao.DetalleVentasDaoImpl" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/DetalleVentasDao/DetalleVentasDaoImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="226" x="6406" y="37"/>    
+    <position height="135" width="226" x="288" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="7" language="java" name="cursoNTecnologias.bd.DireccionDao.DireccionDao" 
+  <interface id="5" language="java" name="cursoNTecnologias.bd.DireccionDao.DireccionDao" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/DireccionDao/DireccionDao.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="167" x="1267" y="518"/>    
+    <position height="81" width="167" x="484" y="549"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="8" language="java" name="cursoNTecnologias.bd.DireccionDao.DireccionDaoImpl" 
+  <class id="6" language="java" name="cursoNTecnologias.bd.DireccionDao.DireccionDaoImpl" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/DireccionDao/DireccionDaoImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="153" width="180" x="1267" y="37"/>    
+    <position height="153" width="180" x="630" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="9" language="java" name="cursoNTecnologias.bd.GananciasDao.GananciasDao" 
+  <interface id="7" language="java" name="cursoNTecnologias.bd.GananciasDao.GananciasDao" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/GananciasDao/GananciasDao.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="198" x="5641" y="518"/>    
+    <position height="81" width="198" x="2917" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="10" language="java" name="cursoNTecnologias.bd.GananciasDao.GananciasDaoImpl" 
+  <class id="8" language="java" name="cursoNTecnologias.bd.GananciasDao.GananciasDaoImpl" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/GananciasDao/GananciasDaoImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="198" x="5641" y="37"/>    
+    <position height="135" width="198" x="2938" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="11" language="java" name="cursoNTecnologias.bd.VentasDao.VentasDao" 
+  <interface id="9" language="java" name="cursoNTecnologias.bd.VentasDao.VentasDao" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/VentasDao/VentasDao.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="186" x="4412" y="518"/>    
+    <position height="117" width="225" x="1141" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="12" language="java" name="cursoNTecnologias.bd.VentasDao.VentasDaoImpl" 
+  <class id="10" language="java" name="cursoNTecnologias.bd.VentasDao.VentasDaoImpl" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/VentasDao/VentasDaoImpl.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="171" width="186" x="4412" y="37"/>    
+    <position height="171" width="225" x="1141" y="37"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="13" language="java" name="cursoNTecnologias.bd.domain.Ganancias" project="ProyectoFrameworksPersistencia" 
+  <class id="11" language="java" name="cursoNTecnologias.bd.domain.Ganancias" project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/domain/Ganancias.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="297" width="171" x="322" y="37"/>    
+    <position height="297" width="171" x="2648" y="549"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="14" language="java" name="cursoNTecnologias.bd.domain.Marcas" project="ProyectoFrameworksPersistencia" 
+  <class id="12" language="java" name="cursoNTecnologias.bd.domain.Marcas" project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/domain/Marcas.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="189" width="167" x="1060" y="37"/>    
+    <position height="189" width="167" x="2060" y="1030"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="15" language="java" name="cursoNTecnologias.bd.domain.Ventas" project="ProyectoFrameworksPersistencia" 
+  <class id="13" language="java" name="cursoNTecnologias.bd.domain.Ventas" project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/domain/Ventas.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="297" width="154" x="2006" y="37"/>    
+    <position height="297" width="154" x="1205" y="549"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="16" language="java" name="cursoNTecnologias.bd.domain.DetalleVentas" 
+  <class id="14" language="java" name="cursoNTecnologias.bd.domain.DetalleVentas" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/domain/DetalleVentas.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="243" width="156" x="2493" y="37"/>    
+    <position height="243" width="156" x="288" y="549"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="17" language="java" name="cursoNTecnologias.bd.domain.Direccion" project="ProyectoFrameworksPersistencia" 
+  <class id="15" language="java" name="cursoNTecnologias.bd.domain.Direccion" project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/domain/Direccion.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="513" width="167" x="5434" y="518"/>    
+    <position height="513" width="167" x="927" y="1030"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="18" language="java" name="cursoNTecnologias.bd.domain.Productos" project="ProyectoFrameworksPersistencia" 
+  <class id="16" language="java" name="cursoNTecnologias.bd.domain.Productos" project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/domain/Productos.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="405" width="156" x="3181" y="37"/>    
+    <position height="441" width="156" x="2057" y="549"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="19" language="java" name="cursoNTecnologias.bd.domain.Cliente" project="ProyectoFrameworksPersistencia" 
+  <class id="17" language="java" name="cursoNTecnologias.bd.domain.Cliente" project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/domain/Cliente.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="441" width="162" x="5439" y="37"/>    
+    <position height="441" width="162" x="1679" y="549"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="20" language="java" name="cursoNTecnologias.bd.mappers.ProductosMapper" 
+  <interface id="18" language="java" name="cursoNTecnologias.bd.mappers.ProductosMapper" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/mappers/ProductosMapper.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="81" width="223" x="5176" y="37"/>    
+    <position height="81" width="223" x="2343" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="21" language="java" name="cursoNTecnologias.bd.mappers.ClienteMapper" 
+  <interface id="19" language="java" name="cursoNTecnologias.bd.mappers.ClienteMapper" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/mappers/ClienteMapper.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="171" width="233" x="787" y="37"/>    
+    <position height="171" width="233" x="1406" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="22" language="java" name="cursoNTecnologias.bd.mappers.VentasMapper" 
+  <interface id="20" language="java" name="cursoNTecnologias.bd.mappers.VentasMapper" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/mappers/VentasMapper.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="117" width="230" x="4142" y="37"/>    
+    <position height="135" width="230" x="850" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="23" language="java" name="cursoNTecnologias.bd.mappers.DireccionMapper" 
+  <interface id="21" language="java" name="cursoNTecnologias.bd.mappers.DireccionMapper" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/mappers/DireccionMapper.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="215" x="2689" y="37"/>    
+    <position height="99" width="215" x="691" y="549"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="24" language="java" name="cursoNTecnologias.bd.mappers.MarcasMapper" 
+  <interface id="22" language="java" name="cursoNTecnologias.bd.mappers.MarcasMapper" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/mappers/MarcasMapper.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="81" width="197" x="2944" y="37"/>    
+    <position height="153" width="198" x="967" y="549"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="25" language="java" name="cursoNTecnologias.bd.mappers.DetalleVentasMapper" 
+  <interface id="23" language="java" name="cursoNTecnologias.bd.mappers.DetalleVentasMapper" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/mappers/DetalleVentasMapper.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="241" x="41" y="37"/>    
+    <position height="99" width="241" x="328" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <interface id="26" language="java" name="cursoNTecnologias.bd.mappers.GananciasMapper" 
+  <interface id="24" language="java" name="cursoNTecnologias.bd.mappers.GananciasMapper" 
     project="ProyectoFrameworksPersistencia" 
     file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/mappers/GananciasMapper.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="229" x="4638" y="37"/>    
+    <position height="99" width="229" x="2648" y="320"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <package id="27" language="java" name="cursoNTecnologias.bd.GananciasDao" project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/GananciasDao" binary="false" 
+  <class id="25" language="java" name="cursoNTecnologias.dao.VentaDaoImplTest" project="ProyectoFrameworksPersistencia" 
+    file="/ProyectoFrameworksPersistencia/src/test/java/cursoNTecnologias/dao/VentaDaoImplTest.java" binary="false" 
     corner="BOTTOM_RIGHT">    
-    <position height="50" width="235" x="1487" y="37"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="28" language="java" name="cursoNTecnologias.bd.domain" project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/domain" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="50" width="195" x="3377" y="37"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="29" language="java" name="cursoNTecnologias.bd.dao.Productos" project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/dao/Productos" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="50" width="236" x="3612" y="37"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="30" language="java" name="cursoNTecnologias.bd.ClienteDao" project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/ClienteDao" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="50" width="214" x="533" y="37"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="31" language="java" name="cursoNTecnologias.bd.VentasDao" project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/VentasDao" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="50" width="214" x="3888" y="37"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="32" language="java" name="cursoNTecnologias.bd.DetalleVentasDao" project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/DetalleVentasDao" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="50" width="253" x="2200" y="37"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="33" language="java" name="cursoNTecnologias.bd.DireccionDao" project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/DireccionDao" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="50" width="229" x="4907" y="37"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <package id="34" language="java" name="cursoNTecnologias.bd.mappers" project="ProyectoFrameworksPersistencia" 
-    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/mappers" binary="false" 
-    corner="BOTTOM_RIGHT">    
-    <position height="50" width="204" x="1762" y="37"/>    
-    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
-  </package>  
-  <realization id="35">    
-    <end type="SOURCE" refId="10"/>    
-    <end type="TARGET" refId="9"/>  
-  </realization>  
-  <realization id="36">    
-    <end type="SOURCE" refId="3"/>    
-    <end type="TARGET" refId="4"/>  
-  </realization>  
-  <realization id="37">    
+    <position height="99" width="126" x="2017" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="26" language="java" name="cursoNTecnologias.bd.ProductosDao.ProductosDaoImpl" 
+    project="ProyectoFrameworksPersistencia" 
+    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/ProductosDao/ProductosDaoImpl.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="243" width="246" x="2587" y="37"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <interface id="27" language="java" name="cursoNTecnologias.bd.ProductosDao.ProductosDao" 
+    project="ProyectoFrameworksPersistencia" 
+    file="/ProyectoFrameworksPersistencia/src/main/java/cursoNTecnologias/bd/ProductosDao/ProductosDao.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="189" width="246" x="2057" y="320"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </interface>  
+  <dependency id="28">    
+    <bendpoint x="936" y="549"/>    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <realization id="29">    
     <end type="SOURCE" refId="8"/>    
     <end type="TARGET" refId="7"/>  
   </realization>  
-  <association id="38">    
-    <end type="SOURCE" refId="19" navigable="false">      
-      <attribute id="39" name="direccion"/>      
-      <multiplicity id="40" minimum="0" maximum="1"/>    
+  <dependency id="30">    
+    <bendpoint x="297" y="320"/>    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="31">    
+    <end type="SOURCE" refId="18"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="32">    
+    <end type="SOURCE" refId="23"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="33">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="34">    
+    <bendpoint x="2000" y="289"/>    
+    <bendpoint x="2581" y="294"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <dependency id="35">    
+    <bendpoint x="1161" y="518"/>    
+    <end type="SOURCE" refId="20"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="36">    
+    <bendpoint x="1110" y="320"/>    
+    <bendpoint x="1106" y="432"/>    
+    <bendpoint x="1179" y="490"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <dependency id="37">    
+    <bendpoint x="2005" y="320"/>    
+    <bendpoint x="2009" y="533"/>    
+    <bendpoint x="2355" y="528"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="38">    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="18"/>  
+  </dependency>  
+  <dependency id="39">    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="13"/>  
+  </dependency>  
+  <association id="40">    
+    <end type="SOURCE" refId="17" navigable="false">      
+      <attribute id="41" name="direccion">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </attribute>      
+      <multiplicity id="42" minimum="0" maximum="1">        
+        <position height="0" width="0" x="0" y="0"/>      
+      </multiplicity>    
     </end>    
-    <end type="TARGET" refId="17" navigable="true"/>    
+    <end type="TARGET" refId="15" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <realization id="41">    
+  <dependency id="43">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <realization id="44">    
     <end type="SOURCE" refId="2"/>    
     <end type="TARGET" refId="1"/>  
   </realization>  
-  <realization id="42">    
+  <dependency id="45">    
+    <end type="SOURCE" refId="27"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <realization id="46">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="3"/>  
+  </realization>  
+  <dependency id="47">    
+    <bendpoint x="594" y="287"/>    
+    <bendpoint x="590" y="447"/>    
+    <bendpoint x="503" y="510"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <association id="48">    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="49" name="productosDao"/>      
+      <multiplicity id="50" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="27" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <realization id="51">    
     <end type="SOURCE" refId="6"/>    
     <end type="TARGET" refId="5"/>  
   </realization>  
-  <realization id="43">    
-    <end type="SOURCE" refId="12"/>    
-    <end type="TARGET" refId="11"/>  
+  <realization id="52">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="9"/>  
   </realization>  
+  <dependency id="53">    
+    <bendpoint x="2026" y="320"/>    
+    <bendpoint x="2030" y="472"/>    
+    <end type="SOURCE" refId="25"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="54">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="14"/>  
+  </dependency>  
+  <dependency id="55">    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="19"/>  
+  </dependency>  
+  <dependency id="56">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="20"/>  
+  </dependency>  
+  <dependency id="57">    
+    <bendpoint x="1199" y="937"/>    
+    <end type="SOURCE" refId="22"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="58">    
+    <end type="SOURCE" refId="21"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="59">    
+    <bendpoint x="1984" y="320"/>    
+    <bendpoint x="1984" y="549"/>    
+    <bendpoint x="1867" y="1014"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="15"/>  
+  </dependency>  
+  <dependency id="60">    
+    <bendpoint x="1401" y="514"/>    
+    <bendpoint x="1876" y="536"/>    
+    <end type="SOURCE" refId="9"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="61">    
+    <end type="SOURCE" refId="6"/>    
+    <end type="TARGET" refId="21"/>  
+  </dependency>  
+  <dependency id="62">    
+    <bendpoint x="2572" y="439"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="63">    
+    <end type="SOURCE" refId="1"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <dependency id="64">    
+    <end type="SOURCE" refId="4"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <association id="65">    
+    <end type="SOURCE" refId="16" navigable="false">      
+      <attribute id="66" name="marcas"/>      
+      <multiplicity id="67" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="12" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="68">    
+    <end type="SOURCE" refId="24"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
+  <dependency id="69">    
+    <bendpoint x="1942" y="320"/>    
+    <bendpoint x="1944" y="473"/>    
+    <end type="SOURCE" refId="2"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <realization id="70">    
+    <bendpoint x="2389" y="259"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="27"/>  
+  </realization>  
+  <association id="71">    
+    <bendpoint x="1985" y="272"/>    
+    <bendpoint x="1414" y="271"/>    
+    <end type="SOURCE" refId="25" navigable="false">      
+      <attribute id="72" name="ventasDao"/>      
+      <multiplicity id="73" minimum="0" maximum="1"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <dependency id="74">    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="24"/>  
+  </dependency>  
+  <dependency id="75">    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="23"/>  
+  </dependency>  
+  <dependency id="76">    
+    <bendpoint x="2617" y="320"/>    
+    <bendpoint x="2617" y="549"/>    
+    <end type="SOURCE" refId="26"/>    
+    <end type="TARGET" refId="12"/>  
+  </dependency>  
+  <dependency id="77">    
+    <end type="SOURCE" refId="19"/>    
+    <end type="TARGET" refId="17"/>  
+  </dependency>  
+  <dependency id="78">    
+    <bendpoint x="1963" y="320"/>    
+    <bendpoint x="1958" y="498"/>    
+    <end type="SOURCE" refId="10"/>    
+    <end type="TARGET" refId="16"/>  
+  </dependency>  
+  <dependency id="79">    
+    <bendpoint x="3145" y="320"/>    
+    <bendpoint x="3142" y="422"/>    
+    <end type="SOURCE" refId="8"/>    
+    <end type="TARGET" refId="11"/>  
+  </dependency>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    

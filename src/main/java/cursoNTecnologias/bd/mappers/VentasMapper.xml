@@ -8,13 +8,21 @@
     <result column="fecha" jdbcType="DATE" property="fecha" />
   </resultMap>
   
-  <resultMap id="consultarVentaByIdCliente" type="cursoNTecnologias.bd.domain.Ventas">
+  <resultMap id="resultMapVentasCliente" type="cursoNTecnologias.bd.domain.Ventas">
   	<id column="idVenta" jdbcType="INTEGER" property="idventa" />
     <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
     <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
     <result column="fecha" jdbcType="DATE" property="fecha" />
     <association property="cliente" column="clienteId" resultMap="cursoNTecnologias.bd.mappers.ClienteMapper.resultClienteDireccion"/>
   </resultMap>
+	
+	<resultMap id="resultMapVentasCliente" type="cursoNTecnologias.bd.domain.Ventas">
+	  	<id column="idVenta" jdbcType="INTEGER" property="idventa" />
+	    <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
+	    <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
+	    <result column="fecha" jdbcType="DATE" property="fecha" />
+	    <association property="cliente" column="clienteId" resultMap="cursoNTecnologias.bd.mappers.ClienteMapper.resultClienteDireccion"/>
+ 	</resultMap>
   
   	<insert id="insertVenta" useGeneratedKeys="true" keyProperty="idventa" parameterType="cursoNTecnologias.bd.domain.Ventas">
 	  insert into ventas (clienteId, totalVenta)
