@@ -11,9 +11,31 @@
     <result column="pais" jdbcType="VARCHAR" property="pais" />
     <result column="codigoPostal" jdbcType="INTEGER" property="codigopostal" />
   </resultMap>
-	<select id="direccionId" resultMap="BaseResultMap" parameterType="Integer">
+  
+  <select id= "listarDireccion" resultMap="BaseResultMap">
+  	select * from direccion
+  </select>  
+  <select id="direccionId" resultMap="BaseResultMap" parameterType="Integer">
 	SELECT * from direccion WHERE idDireccion = #{id}
-	</select>
+  </select>
+  
+  <insert id="insertarDireccion" parameterType="cursoNTecnologias.bd.domain.Direccion" >
+  INSERT INTO direccion(calle, numero, colonia, ciudad, estado, pais, codigopostal)
+  VALUES
+  (#{calle}, #{numero}, #{colonia}, #{ciudad}, #{estado}, #{pais}, #{codigopostal})
+  </insert>
+  
+  <delete id="eliminarDireccion" parameterType="cursoNTecnologias.bd.domain.Direccion">
+  DELETE FROM direccion 
+  WHERE iddireccion=#{iddireccion}
+  </delete>
+  
+  <update id="actualizarDireccion" parameterType="cursoNTecnologias.bd.domain.Direccion">
+  UPDATE direccion SET 
+  calle=#{calle}, numero=#{numero},colonia=#{colonia},ciudad=#{ciudad},estado=#{estado}, pais=#{pais}, codigopostal=#{codigopostal} 
+  WHERE iddireccion=#{iddireccion}
+  </update>
+	
 </mapper>
 
 
