@@ -3,6 +3,7 @@ package cursoNTecnologias.bd.ClienteDao;
 import java.util.List;
 
 import cursoNTecnologias.bd.domain.Cliente;
+import cursoNTecnologias.bd.domain.Direccion;
 	
 
 public interface ClienteDao {
