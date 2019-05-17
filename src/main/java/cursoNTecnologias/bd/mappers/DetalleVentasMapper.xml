@@ -7,7 +7,7 @@
     <result column="cantidad" jdbcType="INTEGER" property="cantidad" />
   </resultMap>
   
-  <resultMap id="BaseResultMap" type="cursoNTecnologias.bd.domain.DetalleVentas">
+  <resultMap id="BaseResultMapByProductId" type="cursoNTecnologias.bd.domain.DetalleVentas">
     <id column="ventaId" jdbcType="INTEGER" property="ventaid" />
     <result column="productoId" jdbcType="INTEGER" property="productoid" />
     <result column="cantidad" jdbcType="INTEGER" property="cantidad" />

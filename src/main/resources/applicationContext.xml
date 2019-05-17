@@ -19,7 +19,7 @@ http://www.springframework.org/schema/jdbc/spring-jdbc.xsd">
 
 <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" >
 	<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-	<property name="url" value="jdbc:mysql://localhost:3306/utm" />
+	<property name="url" value="jdbc:mysql://localhost:3306/utm_equipo2" />
 	<property name="username" value="root" />
 	<property name="password" value="" />
 </bean>
