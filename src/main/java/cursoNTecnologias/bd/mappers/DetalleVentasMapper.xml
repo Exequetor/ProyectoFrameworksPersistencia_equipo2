@@ -9,7 +9,7 @@
     <association property="producto" column="productoId" resultMap="cursoNTecnologias.bd.mappers.ProductosMapper.resultProductosMarca" />
   </resultMap>
   
-  <select id="queryAllDetalleVentasProductos" resultMap="BaseResultMap" parameterType="Integer">
+  <select id="queryAllDetalleVentasProductos" resultMap="BaseResultMap">
   	SELECT * FROM detalleventas as dv
   	INNER JOIN productos as p
   	WHERE dv.productoId = p.idProducto
