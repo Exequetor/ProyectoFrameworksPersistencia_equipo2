@@ -47,7 +47,22 @@ public class Ganancias {
      *
      * @mbg.generated Fri Apr 12 07:54:51 CDT 2019
      */
-    public Integer getIdganancia() {
+    
+    private Ventas venta;
+    
+    public Ganancias () {
+    	setVenta(new Ventas ());
+    }
+    
+    public Ventas getVenta() {
+		return venta;
+	}
+
+	public void setVenta(Ventas venta) {
+		this.venta = venta;
+	}
+
+	public Integer getIdganancia() {
         return idganancia;
     }
 
