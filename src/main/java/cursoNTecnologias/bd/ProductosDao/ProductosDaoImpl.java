@@ -125,7 +125,6 @@ public class ProductosDaoImpl implements ProductosDao{
 	}
 
 
-	@Override
 	public void agregarProducto(Productos p) {
 		// TODO Auto-generated method stub
 		System.out.println("Id: " + p.getIdproducto());
@@ -133,7 +132,6 @@ public class ProductosDaoImpl implements ProductosDao{
 	}
 
 
-	@Override
 	public Productos listarUnProducto(Productos p) {
 		// TODO Auto-generated method stub
 		return null;

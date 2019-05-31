@@ -21,7 +21,6 @@ public class DetalleVentasDaoImpl implements DetalleVentasDao, Serializable {
 		this.sqlSession= sqlSession;
 	}
 	
-	@Override
 	public List<DetalleVentas> queryAllDetalleVentasProductos() {
 		List<DetalleVentas> list = null;
 		try {
@@ -40,7 +39,6 @@ public class DetalleVentasDaoImpl implements DetalleVentasDao, Serializable {
 		return list;
 	}
 
-	@Override
 	public List<DetalleVentas> queryDetalleVentasProductosByVentaId(Integer id) {
 		List<DetalleVentas> list = null;
 		try {
@@ -60,7 +58,6 @@ public class DetalleVentasDaoImpl implements DetalleVentasDao, Serializable {
 		return list;
 	}
 	
-	@Override
 	public void insertDetalleVentas(DetalleVentas dventas) {
 		try {
 			DetalleVentasMapper detalleVentasMapper = sqlSession.getMapper(DetalleVentasMapper.class);
@@ -75,7 +72,6 @@ public class DetalleVentasDaoImpl implements DetalleVentasDao, Serializable {
 		}
 	}
 
-	@Override
 	public void updateDetalleVentas(DetalleVentas dventas) {
 		try {
 			
@@ -85,7 +81,6 @@ public class DetalleVentasDaoImpl implements DetalleVentasDao, Serializable {
 		}
 	}
 
-	@Override
 	public void deleteDetalleVentasByVentasId(Integer ventasId) {
 		try {
 			

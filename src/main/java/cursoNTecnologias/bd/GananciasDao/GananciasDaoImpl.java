@@ -22,19 +22,16 @@ public class GananciasDaoImpl implements GananciasDao, Serializable {
 		this.sqlSession= sqlSession;
 	}
 
-	@Override
 	public List<Ganancias> queryAllGanancias() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public List<Ganancias> queryGananciasByVentaId() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
-	@Override
 	public void insertGanancias(Ganancias ganancias) {
 		try {
 			GananciasMapper gananciasMapper = sqlSession.getMapper(GananciasMapper.class);
@@ -47,13 +44,11 @@ public class GananciasDaoImpl implements GananciasDao, Serializable {
 		}
 	}
 	
-	@Override
 	public void updateGanancias(Ganancias ganancia) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void deleteGananciasByGananciasId(Integer gananciaId) {
 		// TODO Auto-generated method stub
 		

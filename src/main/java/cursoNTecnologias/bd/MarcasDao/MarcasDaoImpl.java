@@ -21,7 +21,6 @@ public class MarcasDaoImpl implements MarcasDao{
 	}
 	
 
-	@Override
 	public Marcas obtenerMarcaId(Integer id) {
 		Marcas marca = null;
 		try {
@@ -56,7 +55,6 @@ public class MarcasDaoImpl implements MarcasDao{
 	}
 
 
-	@Override
 	public void agregarMarca(Marcas m) {
 		// TODO Auto-generated method stub
 		try {
@@ -72,7 +70,6 @@ public class MarcasDaoImpl implements MarcasDao{
 	}
 
 
-	@Override
 	public void deleteMarca(Integer id) {
 		// TODO Auto-generated method stub
 		try {
@@ -84,7 +81,6 @@ public class MarcasDaoImpl implements MarcasDao{
 	}
 
 
-	@Override
 	public void updateMarca(Marcas m) {
 		// TODO Auto-generated method stub
 		try {

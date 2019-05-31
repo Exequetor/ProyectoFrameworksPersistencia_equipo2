@@ -35,25 +35,21 @@ public class VentasDaoImpl implements VentasDao, Serializable {
 		this.sqlSession= sqlSession;
 	}
 	
-	@Override
 	public List<Ventas> queryAllVentas() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public List<Ventas> queryVentasByVentaId() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 	
-	@Override
 	public List<Ventas> queryVentasByClienteId() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-	@Override
 	public void insertVenta(Integer idCliente, List<Productos> productos) {
 		try {
 			double totalPrecio = 0;
@@ -116,13 +112,11 @@ public class VentasDaoImpl implements VentasDao, Serializable {
 		}
 	}
 
-	@Override
 	public void updateVentas(Ventas ventas) {
 		// TODO Auto-generated method stub
 		
 	}
 
-	@Override
 	public void deleteVentasByVentasId(Integer ventasId) {
 		// TODO Auto-generated method stub
 		

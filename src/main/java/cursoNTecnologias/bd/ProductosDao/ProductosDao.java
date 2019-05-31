@@ -11,7 +11,6 @@ public interface ProductosDao {
 	Productos listarUnProducto(Productos p);
 	void updateProducto(Productos p);
 	void deleteProducto(Integer id);
-	
 	List<Productos> listarTodosProductosMarca();
 	Productos productoMarca(Integer id);
 	void agregarProducto(Productos p);
