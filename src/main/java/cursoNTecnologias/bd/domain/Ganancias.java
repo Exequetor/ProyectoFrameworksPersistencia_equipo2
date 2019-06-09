@@ -149,4 +149,14 @@ public class Ganancias {
     public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
+    
+    @Override
+    public String toString () {
+    	String str = "";
+    	str += "idGanancia: " + idganancia + "\n";
+    	str += "ventaId: " + ventaid + "\n";
+    	str += "totalGanancia: " + totalganancia + "\n";
+    	str += "fecha: " + fecha + "\n";
+    	return str;
+    }
 }

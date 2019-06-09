@@ -10,8 +10,8 @@ public interface VentasDao {
 	 * Consultas
 	 */
 	public List<Ventas> queryAllVentas();
-	public List<Ventas> queryVentasByVentaId();
-	public List<Ventas> queryVentasByClienteId();
+	public List<Ventas> queryVentasByVentaId(Integer id);
+	public List<Ventas> queryVentasByClienteId(Integer id);
 	
 	/**
 	 * Insert
