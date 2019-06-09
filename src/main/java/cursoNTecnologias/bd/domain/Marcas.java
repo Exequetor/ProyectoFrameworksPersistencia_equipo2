@@ -66,4 +66,20 @@ public class Marcas {
     public void setNombremarca(String nombremarca) {
         this.nombremarca = nombremarca;
     }
+    
+
+	/**
+	 * Método que compara si dos objetos son iguales.
+	 * 
+	 * @param object Objeto a ser comparado.
+	 * @return verdadero o falso en la comparación.
+	 */
+	public boolean equals(Object object) {
+
+		if (!(object instanceof Marcas)) {
+			return false;
+		}
+		Marcas regMarcas = (Marcas) object;
+		return (this.idmarca == regMarcas.idmarca);
+	}
 }

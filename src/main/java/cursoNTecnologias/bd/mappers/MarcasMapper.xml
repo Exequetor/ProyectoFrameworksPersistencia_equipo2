@@ -27,4 +27,14 @@
   	update marcas  set nombreMarca=#{nombremarca} where idMarca= #{idmarca}
   </update>
   
+  
+  <select id="obtenerMarcaPorId" resultMap="BaseResultMap"
+	parameterType="hashMap">
+		SELECT *
+		FROM
+		marcas
+		WHERE
+		idMarca = #{idmarca}
+	</select>
+
 </mapper>
