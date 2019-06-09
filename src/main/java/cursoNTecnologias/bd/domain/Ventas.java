@@ -1,6 +1,8 @@
 package cursoNTecnologias.bd.domain;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Ventas {
     /**
@@ -47,6 +49,31 @@ public class Ventas {
      *
      * @mbg.generated Fri Apr 12 07:54:51 CDT 2019
      */
+    
+    private Cliente cliente;
+    private List<DetalleVentas> detalleVentasList;
+    
+    public List<DetalleVentas> getDetalleVentaList() {
+		return detalleVentasList;
+	}
+
+	public void setDetalleVentaList(List<DetalleVentas> detalleVentaList) {
+		this.detalleVentasList = detalleVentaList;
+	}
+
+	public Cliente getCliente() {
+		return cliente;
+	}
+
+	public void setCliente(Cliente cliente) {
+		this.cliente = cliente;
+	}
+
+	public Ventas () {
+    	this.cliente = new Cliente ();
+    	this.detalleVentasList = new ArrayList<DetalleVentas>();
+    }
+    
     public Integer getIdventa() {
         return idventa;
     }
@@ -133,5 +160,15 @@ public class Ventas {
      */
     public void setFecha(Date fecha) {
         this.fecha = fecha;
+    }
+    
+    @Override
+    public String toString () {
+    	String str = "";
+    	str += "idVenta: " + idventa + "\n";
+    	str += "clienteId: " + clienteid + "\n";
+    	str += "totalVenta: " + totalventa + "\n";
+    	str += "Fecha: " + fecha + "\n";
+    	return str;
     }
 }

@@ -5,28 +5,42 @@
     <id column="idVenta" jdbcType="INTEGER" property="idventa" />
     <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
     <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
-    <result column="fecha" jdbcType="DATE" property="fecha" />
+    <result column="fecha" jdbcType="TIMESTAMP" property="fecha" />
   </resultMap>
   
-  <resultMap id="resultMapVentasByClienteId" type="cursoNTecnologias.bd.domain.Ventas">
+  <resultMap id="resultMapVentasClienteListaDetalleVentas" type="cursoNTecnologias.bd.domain.Ventas">
   	<id column="idVenta" jdbcType="INTEGER" property="idventa" />
     <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
     <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
-    <result column="fecha" jdbcType="DATE" property="fecha" />
+    <result column="fecha" jdbcType="TIMESTAMP" property="fecha" />
+    
     <association property="cliente" column="clienteId" resultMap="cursoNTecnologias.bd.mappers.ClienteMapper.resultClienteDireccion"/>
+    <collection property="detalleVentasList" column="idVenta" select="cursoNTecnologias.bd.mappers.DetalleVentasMapper.queryDetalleVentasProductosByVentaId" />
   </resultMap>
-	
-	<resultMap id="resultMapVentasById" type="cursoNTecnologias.bd.domain.Ventas">
-	  	<id column="idVenta" jdbcType="INTEGER" property="idventa" />
-	    <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
-	    <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
-	    <result column="fecha" jdbcType="DATE" property="fecha" />
-	    <association property="cliente" column="clienteId" resultMap="cursoNTecnologias.bd.mappers.ClienteMapper.resultClienteDireccion"/>
- 	</resultMap>
   
-  	<insert id="insertVenta" useGeneratedKeys="true" keyProperty="idventa" parameterType="cursoNTecnologias.bd.domain.Ventas">
-	  insert into ventas (clienteId, totalVenta)
-	  values (#{clienteid},#{totalventa})
+  	<select id="queryAllVentas" resultMap="resultMapVentasClienteListaDetalleVentas">
+  		SELECT * FROM ventas as v
+  		INNER JOIN detalleventas as dv ON v.idVenta = dv.ventaId
+  		INNER JOIN CLIENTE as c ON v.clienteId = c.id
+  	</select>
+  	
+  	<select id="queryVentasByVentaId" resultMap="resultMapVentasClienteListaDetalleVentas" parameterType="Integer">
+  		SELECT * FROM ventas as v
+  		INNER JOIN detalleventas as dv ON v.idVenta = dv.ventaId
+  		INNER JOIN CLIENTE as c ON v.clienteId = c.id
+  		WHERE v.idVenta = #{id}
+  	</select>
+  
+  	<select id="queryVentasByClienteId" resultMap="resultMapVentasClienteListaDetalleVentas" parameterType="Integer">
+  		SELECT * FROM ventas as v
+  		INNER JOIN detalleventas as dv ON v.idVenta = dv.ventaId
+  		INNER JOIN CLIENTE as c ON v.clienteId = c.id
+  		WHERE v.idVenta = #{id}
+  	</select>
+  	
+	<insert id="insertVenta" useGeneratedKeys="true" keyProperty="idventa" parameterType="cursoNTecnologias.bd.domain.Ventas">
+  		INSERT INTO ventas (clienteId, totalVenta)
+  		VALUES (#{clienteid},#{totalventa})
 	</insert>
-  
+  	
 </mapper>
