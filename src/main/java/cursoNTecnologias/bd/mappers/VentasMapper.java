@@ -20,10 +20,10 @@ public interface VentasMapper {
 	/**
 	 * Update
 	 */
-	public void updateVenta(Ventas ventas);
+	public void updateVenta(Ventas venta);
 	
 	/**
 	 * Delete
 	 */
-	public void deleteVenta(Integer ventasId);
+	public void deleteVenta(Integer id);
 }

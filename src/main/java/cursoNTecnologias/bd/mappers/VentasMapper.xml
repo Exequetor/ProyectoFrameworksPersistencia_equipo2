@@ -15,26 +15,24 @@
     <result column="fecha" jdbcType="TIMESTAMP" property="fecha" />
     
     <association property="cliente" column="clienteId" resultMap="cursoNTecnologias.bd.mappers.ClienteMapper.resultClienteDireccion"/>
-    <collection property="detalleVentasList" column="idVenta" select="cursoNTecnologias.bd.mappers.DetalleVentasMapper.queryDetalleVentasProductosByVentaId" />
+    <collection property="detalleVentasList" ofType="cursoNTecnologias.bd.domain.DetalleVentas" column="ventaId" select="cursoNTecnologias.bd.mappers.DetalleVentasMapper.queryDetalleVentasProductosByVentaId">
+    </collection>
   </resultMap>
   
   	<select id="queryAllVentas" resultMap="resultMapVentasClienteListaDetalleVentas">
   		SELECT * FROM ventas as v
-  		INNER JOIN detalleventas as dv ON v.idVenta = dv.ventaId
-  		INNER JOIN CLIENTE as c ON v.clienteId = c.id
+  		LEFT JOIN detalleventas as dv ON v.idVenta = dv.ventaId
   	</select>
   	
   	<select id="queryVentasByVentaId" resultMap="resultMapVentasClienteListaDetalleVentas" parameterType="Integer">
   		SELECT * FROM ventas as v
-  		INNER JOIN detalleventas as dv ON v.idVenta = dv.ventaId
-  		INNER JOIN CLIENTE as c ON v.clienteId = c.id
+  		LEFT JOIN detalleventas as dv ON v.idVenta = dv.ventaId
   		WHERE v.idVenta = #{id}
   	</select>
   
   	<select id="queryVentasByClienteId" resultMap="resultMapVentasClienteListaDetalleVentas" parameterType="Integer">
   		SELECT * FROM ventas as v
-  		INNER JOIN detalleventas as dv ON v.idVenta = dv.ventaId
-  		INNER JOIN CLIENTE as c ON v.clienteId = c.id
+  		LEFT JOIN cliente as c ON v.clienteId = c.id
   		WHERE v.idVenta = #{id}
   	</select>
   	
@@ -42,5 +40,17 @@
   		INSERT INTO ventas (clienteId, totalVenta)
   		VALUES (#{clienteid},#{totalventa})
 	</insert>
+	
+	<update id = "updateVenta" parameterType="cursoNTecnologias.bd.domain.Ventas" > 
+  		UPDATE ventas SET
+   		clienteId = #{clienteid},
+    	totalVenta = #{totalventa},
+    	fecha = #{fecha}
+   		WHERE idVenta = #{idventa}
+  	</update>
+  	
+  	<delete id="deleteVenta" parameterType="Integer">
+  		DELETE FROM ventas WHERE idVenta=#{id}
+  	</delete>
   	
 </mapper>

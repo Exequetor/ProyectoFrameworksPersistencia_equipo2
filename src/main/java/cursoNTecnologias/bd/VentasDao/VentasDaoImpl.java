@@ -15,7 +15,7 @@ import cursoNTecnologias.bd.domain.DetalleVentas;
 import cursoNTecnologias.bd.domain.Ganancias;
 import cursoNTecnologias.bd.domain.Productos;
 import cursoNTecnologias.bd.domain.Ventas;
-
+import cursoNTecnologias.bd.mappers.MarcasMapper;
 import cursoNTecnologias.bd.mappers.VentasMapper;
 
 @Named
@@ -123,7 +123,6 @@ public class VentasDaoImpl implements VentasDao, Serializable {
 			ganancia.setTotalganancia(totalVenta - totalPrecio);
 			ganancia.setVentaid(idRetornado);
 			gananciasDao.insertGanancia(ganancia);
-			
 			/**
 			 * Insertamos todos los registros de detalle ventas.
 			 */
@@ -148,13 +147,21 @@ public class VentasDaoImpl implements VentasDao, Serializable {
 		}
 	}
 
-	public void updateVentas(Ventas ventas) {
-		// TODO Auto-generated method stub
-		
+	public void updateVentas(Ventas venta) {
+		try {
+			VentasMapper vm = sqlSession.getMapper(VentasMapper.class);
+			vm.updateVenta(venta);
+		} catch (Exception e) {
+			System.out.println("Error: " + e);
+		}
 	}
 
-	public void deleteVentasByVentasId(Integer ventasId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteVentasByVentasId(Integer ventaId) {
+		try {
+			VentasMapper vm = sqlSession.getMapper(VentasMapper.class);
+			vm.deleteVenta(ventaId);
+		} catch (Exception e) {
+			System.out.println("Error: " + e);
+		}
 	}
 }

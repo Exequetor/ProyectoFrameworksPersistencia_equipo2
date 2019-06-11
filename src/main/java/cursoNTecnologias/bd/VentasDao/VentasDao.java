@@ -21,10 +21,10 @@ public interface VentasDao {
 	/**
 	 * Update
 	 */
-	public void updateVentas(Ventas ventas);
+	public void updateVentas(Ventas venta);
 	
 	/**
 	 * Delete
 	 */
-	public void deleteVentasByVentasId(Integer ventasId);
+	public void deleteVentasByVentasId(Integer ventaId);
 }
