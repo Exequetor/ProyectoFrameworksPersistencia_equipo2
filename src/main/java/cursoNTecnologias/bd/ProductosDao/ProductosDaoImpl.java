@@ -1,5 +1,7 @@
 package cursoNTecnologias.bd.ProductosDao;
 import java.util.List;
+import java.util.Map;
+
 import javax.inject.Named;
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -134,6 +136,13 @@ public class ProductosDaoImpl implements ProductosDao{
 
 
 	public Productos listarUnProducto(Productos p) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Marcas obtenerMarcaPorId(Map<String, Integer> mapMarca) {
 		// TODO Auto-generated method stub
 		return null;
 	}
