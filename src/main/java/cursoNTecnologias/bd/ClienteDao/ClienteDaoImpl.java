@@ -2,6 +2,7 @@ package cursoNTecnologias.bd.ClienteDao;
 
 import java.io.Serializable;
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Named;
 
@@ -9,7 +10,9 @@ import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import cursoNTecnologias.bd.domain.Cliente;
+import cursoNTecnologias.bd.domain.Direccion;
 import cursoNTecnologias.bd.mappers.ClienteMapper;
+import cursoNTecnologias.bd.mappers.DireccionMapper;
 
 @Named
 public class ClienteDaoImpl implements ClienteDao, Serializable {
@@ -98,6 +101,16 @@ public class ClienteDaoImpl implements ClienteDao, Serializable {
 			System.out.println("Error: " + e);
 		}
 		
+	}
+	public Direccion obtenerDireccionPorId(Map<String, Integer> mapDireccion) {
+		try {
+			DireccionMapper direccionMapper = sqlSession.getMapper(DireccionMapper.class);
+			return direccionMapper.obtenerDireccionPorId(mapDireccion);
+		} catch (Exception e) {
+			System.out.println("Error" + e);
+		}
+		return null;
+
 	}
 	
 }

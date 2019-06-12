@@ -23,15 +23,19 @@
 	WHERE g.ventaid=v.idVenta
   </select>
   
-  <select id="queryGananciasByVentaId" resultMap="BaseResultMapGananciasVentas" parameterType="Integer">
+  <select id="queryGananciaByVentaId" resultMap="BaseResultMapGananciasVentas" parameterType="Integer">
 	SELECT * FROM ganancias as g
 	INNER JOIN ventas as v
 	WHERE g.ventaid=v.idVenta and g.idGanancia=#{gananciaId}
   </select>
   
-  <insert id="insertGanancias" parameterType="cursoNTecnologias.bd.domain.Ganancias" >
-	  INSERT INTO ganancias (ventaId, totalGanancia) 
-	  VALUES
-	  (#{ventaid}, #{totalganancia})
+  <insert id="insertGanancia" parameterType="cursoNTecnologias.bd.domain.Ganancias" >
+	INSERT INTO ganancias (ventaId, totalGanancia) 
+	VALUES
+	(#{ventaid}, #{totalganancia})
   </insert>
+  
+  <delete id="deleteGanancia" parameterType="Integer">
+  	DELETE FROM ganancias WHERE idGanancia = #{gananciaId}
+  </delete>
 </mapper>

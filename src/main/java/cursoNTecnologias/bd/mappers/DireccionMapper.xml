@@ -36,6 +36,10 @@
   WHERE iddireccion=#{iddireccion}
   </update>
 	
+  <select id="obtenerDireccionPorId" resultMap="BaseResultMap" parameterType="hashMap">
+  	SELECT * FROM direccion
+  	WHERE iddireccion = #{iddireccion}
+  </select>
 </mapper>
 
 

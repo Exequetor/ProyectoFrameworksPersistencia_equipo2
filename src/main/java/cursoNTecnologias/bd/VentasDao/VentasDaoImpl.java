@@ -15,7 +15,7 @@ import cursoNTecnologias.bd.domain.DetalleVentas;
 import cursoNTecnologias.bd.domain.Ganancias;
 import cursoNTecnologias.bd.domain.Productos;
 import cursoNTecnologias.bd.domain.Ventas;
-
+import cursoNTecnologias.bd.mappers.MarcasMapper;
 import cursoNTecnologias.bd.mappers.VentasMapper;
 
 @Named
@@ -36,18 +36,54 @@ public class VentasDaoImpl implements VentasDao, Serializable {
 	}
 	
 	public List<Ventas> queryAllVentas() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Ventas> list = null;
+		try {
+			VentasMapper vm = sqlSession.getMapper(VentasMapper.class);
+			list = vm.queryAllVentas();
+			System.out.println("\nqueryAllVentas\n");
+			for(Ventas v : list) {
+				System.out.println(v);
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Error en VentasDaoImpl->queryAllVentas: ");
+			e.printStackTrace();
+		}
+		return list;
 	}
 
-	public List<Ventas> queryVentasByVentaId() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Ventas> queryVentasByVentaId(Integer id) {
+		List<Ventas> list = null;
+		try {
+			VentasMapper vm = sqlSession.getMapper(VentasMapper.class);
+			list = vm.queryVentasByVentaId(id);
+			System.out.println("\nqueryVentasByVentaId\n");
+			for(Ventas v : list) {
+				System.out.println(v);
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Error en VentasDaoImpl->queryVentasByVentaId: ");
+			e.printStackTrace();
+		}
+		return list;
 	}
 	
-	public List<Ventas> queryVentasByClienteId() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Ventas> queryVentasByClienteId(Integer id) {
+		List<Ventas> list = null;
+		try {
+			VentasMapper vm = sqlSession.getMapper(VentasMapper.class);
+			list = vm.queryVentasByClienteId(id);
+			System.out.println("\nqueryVentasByClienteId\n");
+			for(Ventas v : list) {
+				System.out.println(v);
+			}
+			
+		} catch (Exception e) {
+			System.out.println("Error en VentasDaoImpl->queryVentasByClienteId: ");
+			e.printStackTrace();
+		}
+		return list;
 	}
 
 	public void insertVenta(Integer idCliente, List<Productos> productos) {
@@ -86,8 +122,7 @@ public class VentasDaoImpl implements VentasDao, Serializable {
 			Ganancias ganancia = new Ganancias ();
 			ganancia.setTotalganancia(totalVenta - totalPrecio);
 			ganancia.setVentaid(idRetornado);
-			gananciasDao.insertGanancias(ganancia);
-			
+			gananciasDao.insertGanancia(ganancia);
 			/**
 			 * Insertamos todos los registros de detalle ventas.
 			 */
@@ -107,18 +142,26 @@ public class VentasDaoImpl implements VentasDao, Serializable {
 			System.out.println("totalPrecio: " + totalPrecio);
 			System.out.println("totalGanancia: " + (totalVenta - totalPrecio));
 		} catch (Exception e) {
-			System.out.println("Error en VentaasDaoImpl: ");
+			System.out.println("Error en VentasDaoImpl: ");
 			e.printStackTrace();
 		}
 	}
 
-	public void updateVentas(Ventas ventas) {
-		// TODO Auto-generated method stub
-		
+	public void updateVentas(Ventas venta) {
+		try {
+			VentasMapper vm = sqlSession.getMapper(VentasMapper.class);
+			vm.updateVenta(venta);
+		} catch (Exception e) {
+			System.out.println("Error: " + e);
+		}
 	}
 
-	public void deleteVentasByVentasId(Integer ventasId) {
-		// TODO Auto-generated method stub
-		
+	public void deleteVentasByVentasId(Integer ventaId) {
+		try {
+			VentasMapper vm = sqlSession.getMapper(VentasMapper.class);
+			vm.deleteVenta(ventaId);
+		} catch (Exception e) {
+			System.out.println("Error: " + e);
+		}
 	}
 }
