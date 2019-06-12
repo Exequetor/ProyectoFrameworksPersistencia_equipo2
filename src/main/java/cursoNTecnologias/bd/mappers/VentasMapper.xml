@@ -7,21 +7,19 @@
     <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
     <result column="fecha" jdbcType="TIMESTAMP" property="fecha" />
   </resultMap>
-  
+ 	
   <resultMap id="resultMapVentasClienteListaDetalleVentas" type="cursoNTecnologias.bd.domain.Ventas">
   	<id column="idVenta" jdbcType="INTEGER" property="idventa" />
     <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
     <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
     <result column="fecha" jdbcType="TIMESTAMP" property="fecha" />
     
-    <association property="cliente" column="clienteId" resultMap="cursoNTecnologias.bd.mappers.ClienteMapper.resultClienteDireccion"/>
-    <collection property="detalleVentasList" ofType="cursoNTecnologias.bd.domain.DetalleVentas" column="ventaId" select="cursoNTecnologias.bd.mappers.DetalleVentasMapper.queryDetalleVentasProductosByVentaId">
-    </collection>
-  </resultMap>
+    <association property="cliente" column="clienteId" javaType="cursoNTecnologias.bd.domain.Cliente" select="cursoNTecnologias.bd.mappers.ClienteMapper.clienteDireccion"/>
+    <collection property="detalleVentasList" ofType="cursoNTecnologias.bd.domain.DetalleVentas" column="ventaId" select="cursoNTecnologias.bd.mappers.DetalleVentasMapper.queryDetalleVentasProductosByVentaId" />
+  </resultMap> 
   
   	<select id="queryAllVentas" resultMap="resultMapVentasClienteListaDetalleVentas">
   		SELECT * FROM ventas as v
-  		LEFT JOIN detalleventas as dv ON v.idVenta = dv.ventaId
   	</select>
   	
   	<select id="queryVentasByVentaId" resultMap="resultMapVentasClienteListaDetalleVentas" parameterType="Integer">

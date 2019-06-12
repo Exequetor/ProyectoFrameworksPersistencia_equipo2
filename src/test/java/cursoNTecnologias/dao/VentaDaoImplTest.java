@@ -55,4 +55,14 @@ public class VentaDaoImplTest {
 		}
 	}
 	
+	@Test
+	public void queryAll() {
+		try {
+			System.out.println("Test consultar todos los productos");
+			ventasDao.queryAllVentas();
+		} catch (Exception ex) {
+			System.out.println("Error: " + ex);
+		}
+	}
+	
 }
