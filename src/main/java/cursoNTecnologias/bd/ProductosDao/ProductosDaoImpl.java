@@ -23,6 +23,7 @@ public class ProductosDaoImpl implements ProductosDao{
 	public List<Productos> listarTodosProductosMarca() {
 		List<Productos> list = null;
 		try {
+			System.out.println("persistencia impl");
 			ProductosMapper productoMapper = sqlSession.getMapper(ProductosMapper.class);
 			list = productoMapper.listarTodosProductosMarca();
 			for(Productos p:list) {
