@@ -264,4 +264,6 @@ public class Direccion {
     public void setCodigopostal(Integer codigopostal) {
         this.codigopostal = codigopostal;
     }
+
+
 }
