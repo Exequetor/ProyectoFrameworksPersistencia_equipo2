@@ -49,7 +49,7 @@ public class DireccionDaoImplTest {
 			System.out.println("Error: " + ex);
 		}
 	}
-	@Test
+	@Ignore
 	public void eliminarDireccion(){
 		try{
 			direccionDao.eliminarDireccion(5);
@@ -59,7 +59,7 @@ public class DireccionDaoImplTest {
 			System.out.println("Error: " + ex);
 		}
 	}
-	@Ignore
+	@Test
 	public void actualizarDireccion(){
 		try{
 			Direccion direccion = new Direccion();

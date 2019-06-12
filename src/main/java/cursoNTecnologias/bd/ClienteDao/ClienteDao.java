@@ -1,6 +1,7 @@
 package cursoNTecnologias.bd.ClienteDao;
 
 import java.util.List;
+import java.util.Map;
 
 import cursoNTecnologias.bd.domain.Cliente;
 import cursoNTecnologias.bd.domain.Direccion;
@@ -13,4 +14,5 @@ public interface ClienteDao {
 	void insertarCliente(Cliente cliente);
 	void eliminarCliente(Integer id);
 	void actualizarCliente(Cliente cliente);
+	Direccion obtenerDireccionPorId(Map<String, Integer> mapDireccion);
 }
