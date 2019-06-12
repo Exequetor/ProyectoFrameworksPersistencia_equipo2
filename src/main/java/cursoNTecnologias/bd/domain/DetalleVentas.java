@@ -115,4 +115,13 @@ public class DetalleVentas {
     public void setCantidad(Integer cantidad) {
         this.cantidad = cantidad;
     }
+    
+    @Override
+    public String toString () {
+    	String str = "";
+    	str += "ventaId: " + ventaid + "\n";
+    	str += "productoId: " + productoid + "\n";
+    	str += "cantidad: " + cantidad + "\n";
+    	return str;
+    }
 }

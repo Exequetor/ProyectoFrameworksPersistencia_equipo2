@@ -14,15 +14,15 @@ public interface GananciasDao {
 	/**
 	 * Insert
 	 */
-	public void insertGanancias(Ganancias ganancia);
+	public void insertGanancia(Ganancias ganancia);
 	
 	/**
 	 * Update
 	 */
-	public void updateGanancias(Ganancias ganancia);
+	public void updateGanancia(Ganancias ganancia);
 	
 	/**
 	 * Delete
 	 */
-	public void deleteGananciasByGananciasId(Integer gananciaId);
+	public void deleteGanancia(Integer gananciaId);
 }

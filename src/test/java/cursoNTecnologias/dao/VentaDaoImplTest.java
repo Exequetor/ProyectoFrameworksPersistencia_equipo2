@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
+
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
@@ -22,7 +24,7 @@ public class VentaDaoImplTest {
 	@Inject
 	ProductosDao productosDao;
 	
-	@Test
+	@Ignore
 	public void insertVenta (){
 		System.out.println("\nTest: insertar nueva venta.");
 		try{
@@ -52,4 +54,5 @@ public class VentaDaoImplTest {
 			ex.printStackTrace();
 		}
 	}
+	
 }
