@@ -15,7 +15,6 @@ import cursoNTecnologias.bd.domain.DetalleVentas;
 import cursoNTecnologias.bd.domain.Ganancias;
 import cursoNTecnologias.bd.domain.Productos;
 import cursoNTecnologias.bd.domain.Ventas;
-import cursoNTecnologias.bd.mappers.MarcasMapper;
 import cursoNTecnologias.bd.mappers.VentasMapper;
 
 @Named

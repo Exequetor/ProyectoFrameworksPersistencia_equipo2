@@ -12,8 +12,8 @@ public class Ventas {
     private Integer clienteid;
     private Double totalventa;
     private Date fecha;
-    
     private Cliente cliente;
+    
     private List<DetalleVentas> detalleVentasList;
     
     public List<DetalleVentas> getDetalleVentaList() {
@@ -140,6 +140,7 @@ public class Ventas {
     	str += "clienteId: " + clienteid + "\n";
     	str += "totalVenta: " + totalventa + "\n";
     	str += "Fecha: " + fecha + "\n";
+    	str += cliente + "\n";
     	return str;
     }
 }
