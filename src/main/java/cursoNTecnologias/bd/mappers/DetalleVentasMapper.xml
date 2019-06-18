@@ -6,10 +6,10 @@
     <result column="productoId" jdbcType="INTEGER" property="productoid" />
     <result column="cantidad" jdbcType="INTEGER" property="cantidad" />
     
-    <association property="producto" column="productoId" resultMap="cursoNTecnologias.bd.mappers.ProductosMapper.BaseResultMap" />
+    <association property="producto" column="productoId" resultMap="cursoNTecnologias.bd.mappers.ProductosMapper.resultProductosMarca" />
   </resultMap>
   
-  <select id="queryAllDetalleVentasProductos" resultMap="BaseResultMap" parameterType="Integer">
+  <select id="queryAllDetalleVentasProductos" resultMap="BaseResultMap">
   	SELECT * FROM detalleventas as dv
   	INNER JOIN productos as p
   	WHERE dv.productoId = p.idProducto
@@ -18,12 +18,23 @@
   <select id="queryDetalleVentasProductosByVentaId" resultMap="BaseResultMap" parameterType="Integer">
   	SELECT * FROM detalleventas as dv
   	INNER JOIN productos as p
-  	WHERE dv.productoId = p.idProducto AND dv.id = #{id}
+  	WHERE dv.productoId = p.idProducto AND dv.ventaId = #{id}
   </select>
   
   <insert id="insertDetalleVentas" parameterType="cursoNTecnologias.bd.domain.DetalleVentas" useGeneratedKeys="true" keyProperty="id">
-	  INSERT INTO detalleventas (ventaId, productoId, cantidad) 
-	  VALUES
-	  (#{ventaid}, #{productoid}, #{cantidad})
+	INSERT INTO detalleventas (ventaId, productoId, cantidad) 
+	VALUES
+	(#{ventaid}, #{productoid}, #{cantidad})
   </insert>
+  
+  <update id="updateDetalleVentas" parameterType="cursoNTecnologias.bd.domain.DetalleVentas">
+	UPDATE DetalleVentas SET 
+	cantidad=#{cantidad}
+	WHERE ventaId=#{ventaid} and productoId=#{productoid}
+  </update>
+  
+  <delete id="deleteDetalleVentasByVentaId" parameterType="Integer">
+	DELETE FROM DetalleVentas 
+	WHERE ventaId = #{ventasId}
+  </delete>
 </mapper>

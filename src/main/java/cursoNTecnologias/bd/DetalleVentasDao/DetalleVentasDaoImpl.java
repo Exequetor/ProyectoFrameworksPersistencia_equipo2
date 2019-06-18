@@ -46,7 +46,7 @@ public class DetalleVentasDaoImpl implements DetalleVentasDao, Serializable {
 		try {
 			DetalleVentasMapper dvMapper = sqlSession.getMapper(DetalleVentasMapper.class);
 			list = dvMapper.queryDetalleVentasProductosByVentaId(id);
-			System.out.println("Cantidad de registros en detalle ventas: " + list.size());
+			System.out.println("Cantidad de registros en detalle ventas con ventaId = " + id + ": "  + list.size());
 			for (DetalleVentas dv : list) {
 				System.out.println("ventaId = " + dv.getVentaid());
 				System.out.println("Nombre del producto = " + dv.getProducto().getNombre());
@@ -75,10 +75,18 @@ public class DetalleVentasDaoImpl implements DetalleVentasDao, Serializable {
 		}
 	}
 
+	/**
+	 * Se actualiza sólo la cantidad de un producto y una venta específica
+	 */
 	@Override
 	public void updateDetalleVentas(DetalleVentas dventas) {
 		try {
-			
+			DetalleVentasMapper detalleVentasMapper = sqlSession.getMapper(DetalleVentasMapper.class);
+			detalleVentasMapper.updateDetalleVentas(dventas);
+			System.out.println("Se realizó una actualización de cantidad de productos");
+			System.out.println("ventaId = " + dventas.getVentaid());
+			System.out.println("productoId = " + dventas.getProductoid());
+			System.out.println("nueva cantidad = " + dventas.getCantidad());
 		} catch (Exception e) {
 			System.out.println("Error en DetalleVentasDaoImpl->updateDetalleVentas");
 			e.printStackTrace();
@@ -86,9 +94,12 @@ public class DetalleVentasDaoImpl implements DetalleVentasDao, Serializable {
 	}
 
 	@Override
-	public void deleteDetalleVentasByVentasId(Integer ventasId) {
+	public void deleteDetalleVentasByVentaId(Integer ventasId) {
 		try {
-			
+			DetalleVentasMapper detalleVentasMapper = sqlSession.getMapper(DetalleVentasMapper.class);
+			detalleVentasMapper.deleteDetalleVentasByVentaId(ventasId);
+			System.out.println("Se realizó un borrado de registros de la tabla DetallesVenta");
+			System.out.println("Registros borrados relacionados a ventasId = " + ventasId);
 		} catch (Exception e) {
 			System.out.println("Error en DetalleVentasDaoImpl->deleteDetalleVentasByVentasId");
 			e.printStackTrace();

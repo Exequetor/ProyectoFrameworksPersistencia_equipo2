@@ -5,28 +5,50 @@
     <id column="idVenta" jdbcType="INTEGER" property="idventa" />
     <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
     <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
-    <result column="fecha" jdbcType="DATE" property="fecha" />
+    <result column="fecha" jdbcType="TIMESTAMP" property="fecha" />
   </resultMap>
-  
-  <resultMap id="resultMapVentasByClienteId" type="cursoNTecnologias.bd.domain.Ventas">
+ 	
+  <resultMap id="resultMapVentasClienteListaDetalleVentas" type="cursoNTecnologias.bd.domain.Ventas">
   	<id column="idVenta" jdbcType="INTEGER" property="idventa" />
     <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
     <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
-    <result column="fecha" jdbcType="DATE" property="fecha" />
-    <association property="cliente" column="clienteId" resultMap="cursoNTecnologias.bd.mappers.ClienteMapper.resultClienteDireccion"/>
-  </resultMap>
-	
-	<resultMap id="resultMapVentasById" type="cursoNTecnologias.bd.domain.Ventas">
-	  	<id column="idVenta" jdbcType="INTEGER" property="idventa" />
-	    <result column="clienteId" jdbcType="INTEGER" property="clienteid" />
-	    <result column="totalVenta" jdbcType="DOUBLE" property="totalventa" />
-	    <result column="fecha" jdbcType="DATE" property="fecha" />
-	    <association property="cliente" column="clienteId" resultMap="cursoNTecnologias.bd.mappers.ClienteMapper.resultClienteDireccion"/>
- 	</resultMap>
+    <result column="fecha" jdbcType="TIMESTAMP" property="fecha" />
+    
+    <association property="cliente" column="clienteId" javaType="cursoNTecnologias.bd.domain.Cliente" select="cursoNTecnologias.bd.mappers.ClienteMapper.clienteDireccion"/>
+    <collection property="detalleVentasList" ofType="cursoNTecnologias.bd.domain.DetalleVentas" column="ventaId" select="cursoNTecnologias.bd.mappers.DetalleVentasMapper.queryDetalleVentasProductosByVentaId" />
+  </resultMap> 
   
-  	<insert id="insertVenta" useGeneratedKeys="true" keyProperty="idventa" parameterType="cursoNTecnologias.bd.domain.Ventas">
-	  insert into ventas (clienteId, totalVenta)
-	  values (#{clienteid},#{totalventa})
+  	<select id="queryAllVentas" resultMap="resultMapVentasClienteListaDetalleVentas">
+  		SELECT * FROM ventas as v
+  	</select>
+  	
+  	<select id="queryVentasByVentaId" resultMap="resultMapVentasClienteListaDetalleVentas" parameterType="Integer">
+  		SELECT * FROM ventas as v
+  		LEFT JOIN detalleventas as dv ON v.idVenta = dv.ventaId
+  		WHERE v.idVenta = #{id}
+  	</select>
+  
+  	<select id="queryVentasByClienteId" resultMap="resultMapVentasClienteListaDetalleVentas" parameterType="Integer">
+  		SELECT * FROM ventas as v
+  		LEFT JOIN cliente as c ON v.clienteId = c.id
+  		WHERE v.idVenta = #{id}
+  	</select>
+  	
+	<insert id="insertVenta" useGeneratedKeys="true" keyProperty="idventa" parameterType="cursoNTecnologias.bd.domain.Ventas">
+  		INSERT INTO ventas (clienteId, totalVenta)
+  		VALUES (#{clienteid},#{totalventa})
 	</insert>
-  
+	
+	<update id = "updateVenta" parameterType="cursoNTecnologias.bd.domain.Ventas" > 
+  		UPDATE ventas SET
+   		clienteId = #{clienteid},
+    	totalVenta = #{totalventa},
+    	fecha = #{fecha}
+   		WHERE idVenta = #{idventa}
+  	</update>
+  	
+  	<delete id="deleteVenta" parameterType="Integer">
+  		DELETE FROM ventas WHERE idVenta=#{id}
+  	</delete>
+  	
 </mapper>

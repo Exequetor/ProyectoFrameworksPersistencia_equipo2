@@ -9,8 +9,8 @@ public interface VentasMapper {
 	 * Consultas
 	 */
 	public List<Ventas> queryAllVentas();
-	public List<Ventas> queryVentasByVentaId();
-	public List<Ventas> queryVentasByClienteId();
+	public List<Ventas> queryVentasByVentaId(Integer id);
+	public List<Ventas> queryVentasByClienteId(Integer id);
 	
 	/**
 	 * Insert
@@ -20,10 +20,10 @@ public interface VentasMapper {
 	/**
 	 * Update
 	 */
-	public void updateVentas(Ventas ventas);
+	public void updateVenta(Ventas venta);
 	
 	/**
 	 * Delete
 	 */
-	public void deleteVentasByVentasId(Integer ventasId);
+	public void deleteVenta(Integer id);
 }

@@ -8,9 +8,34 @@
     <result column="fecha" jdbcType="DATE" property="fecha" />
   </resultMap>
   
-  <insert id="insertGanancias" parameterType="cursoNTecnologias.bd.domain.Ganancias" >
-	  INSERT INTO ganancias (ventaId, totalGanancia) 
-	  VALUES
-	  (#{ventaid}, #{totalganancia})
+  <resultMap id="BaseResultMapGananciasVentas" type="cursoNTecnologias.bd.domain.Ganancias">
+    <id column="idGanancia" jdbcType="INTEGER" property="idganancia" />
+    <result column="ventaId" jdbcType="INTEGER" property="ventaid" />
+    <result column="totalGanancia" jdbcType="DOUBLE" property="totalganancia" />
+    <result column="fecha" jdbcType="DATE" property="fecha" />
+    
+    <association property="venta" column="ventaId" resultMap="cursoNTecnologias.bd.mappers.ProductosMapper.resultMapVentasByClienteId" />
+  </resultMap>
+  
+  <select id="queryAllGananciasVentas" resultMap="BaseResultMapGananciasVentas">
+	SELECT * FROM ganancias as g
+	INNER JOIN ventas as v
+	WHERE g.ventaid=v.idVenta
+  </select>
+  
+  <select id="queryGananciaByVentaId" resultMap="BaseResultMapGananciasVentas" parameterType="Integer">
+	SELECT * FROM ganancias as g
+	INNER JOIN ventas as v
+	WHERE g.ventaid=v.idVenta and g.idGanancia=#{gananciaId}
+  </select>
+  
+  <insert id="insertGanancia" parameterType="cursoNTecnologias.bd.domain.Ganancias" >
+	INSERT INTO ganancias (ventaId, totalGanancia) 
+	VALUES
+	(#{ventaid}, #{totalganancia})
   </insert>
+  
+  <delete id="deleteGanancia" parameterType="Integer">
+  	DELETE FROM ganancias WHERE idGanancia = #{gananciaId}
+  </delete>
 </mapper>

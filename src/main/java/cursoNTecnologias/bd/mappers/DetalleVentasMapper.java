@@ -25,5 +25,5 @@ public interface DetalleVentasMapper {
 	/**
 	 * Delete
 	 */
-	public void deleteDetalleVentasByVentasId(Integer ventasId);
+	public void deleteDetalleVentasByVentaId(Integer ventasId);
 }

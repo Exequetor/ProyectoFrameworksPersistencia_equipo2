@@ -206,4 +206,10 @@ public class Cliente {
 		Cliente regCliente= (Cliente) object;
 		return (this.id == regCliente.id);
 	}
+
+	@Override
+	public String toString() {
+		return "Cliente [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + ", sexo="
+				+ sexo + ", iddireccion=" + iddireccion + ", direccion=" + direccion + "]";
+	}
 }
