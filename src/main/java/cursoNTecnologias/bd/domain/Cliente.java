@@ -200,7 +200,7 @@ public class Cliente {
 
 	public boolean equals(Object object) {
 
-		if (!(object instanceof Direccion)) {
+		if (!(object instanceof Cliente)) {
 			return false;
 		}
 		Cliente regCliente= (Cliente) object;

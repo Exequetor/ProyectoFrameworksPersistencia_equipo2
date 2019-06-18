@@ -36,7 +36,7 @@
   <insert id="insertarCliente" parameterType="cursoNTecnologias.bd.domain.Cliente" >
   INSERT INTO cliente(nombre, apellido, email, sexo, idDireccion) 
   VALUES
-  (#{nombre}, #{apellido}, #{email}, #{sexo}, #{iddireccion})
+  (#{nombre}, #{apellido}, #{email}, #{sexo}, #{direccion.iddireccion})
   </insert>
   
   <delete id="eliminarCliente" parameterType="cursoNTecnologias.bd.domain.Cliente">
