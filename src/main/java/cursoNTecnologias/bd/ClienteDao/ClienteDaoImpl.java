@@ -102,15 +102,5 @@ public class ClienteDaoImpl implements ClienteDao, Serializable {
 		}
 		
 	}
-	public Direccion obtenerDireccionPorId(Map<String, Integer> mapDireccion) {
-		try {
-			DireccionMapper direccionMapper = sqlSession.getMapper(DireccionMapper.class);
-			return direccionMapper.obtenerDireccionPorId(mapDireccion);
-		} catch (Exception e) {
-			System.out.println("Error" + e);
-		}
-		return null;
-
-	}
 	
 }

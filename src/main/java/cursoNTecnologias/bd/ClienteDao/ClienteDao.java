@@ -14,5 +14,4 @@ public interface ClienteDao {
 	void insertarCliente(Cliente cliente);
 	void eliminarCliente(Integer id);
 	void actualizarCliente(Cliente cliente);
-	Direccion obtenerDireccionPorId(Map<String, Integer> mapDireccion);
 }
