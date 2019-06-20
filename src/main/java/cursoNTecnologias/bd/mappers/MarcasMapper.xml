@@ -32,7 +32,7 @@
 	parameterType="hashMap">
 		SELECT *
 		FROM
-		marcas
+		utm_equipo2.marcas
 		WHERE
 		idMarca = #{idmarca}
 	</select>

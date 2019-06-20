@@ -129,9 +129,10 @@ public class ProductosDaoImpl implements ProductosDao{
 
 
 	public void agregarProducto(Productos p) {
-		// TODO Auto-generated method stub
-		System.out.println("Id: " + p.getIdproducto());
-		System.out.println("Nombre: " + p.getNombre());
+
+		System.out.println("\tAgregando datos producto");
+		ProductosMapper productoMapper = sqlSession.getMapper(ProductosMapper.class);
+		productoMapper.agregarProducto(p);
 	}
 
 
