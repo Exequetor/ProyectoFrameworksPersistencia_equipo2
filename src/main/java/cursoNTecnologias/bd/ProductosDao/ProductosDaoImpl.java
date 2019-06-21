@@ -48,14 +48,14 @@ public class ProductosDaoImpl implements ProductosDao{
 		List<Productos> list = null;
 		try{
 			ProductosMapper productosMapper = sqlSession.getMapper(ProductosMapper.class);
-			list = productosMapper.listarProductos();
+			list = productosMapper.listarTodosProductosMarca();
 			for(Productos p:list){
-				System.out.println("Id: "+ p.getIdproducto() );
+				System.out.println("\nId: "+ p.getIdproducto() );
 				System.out.println("Nombre: "+ p.getNombre() );
 				System.out.println("Precio: "+ p.getPrecio() );
 				System.out.println("Precio venta: "+ p.getPreciovta());
 				System.out.println("Cantidad: "+ p.getCantidad() );
-				System.out.println("Marca: "+ p.getMarcaid());
+				System.out.println("Marca: "+ p.getMarcas().getNombremarca());
 			}
 			return list;
 		}catch(Exception e){
@@ -141,18 +141,11 @@ public class ProductosDaoImpl implements ProductosDao{
 		return null;
 	}
 
-	@Override
 	public Marcas obtenerMarcaPorId(Map<String, Integer> mapMarca) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
-
-	@Override
-	public Marcas obtenerMarcaPorId(Map<String, Integer> mapMarca) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 
 }
