@@ -46,7 +46,7 @@
   
   <update id="actualizarCliente" parameterType="cursoNTecnologias.bd.domain.Cliente">
   UPDATE cliente SET 
-  nombre=#{nombre}, apellido=#{apellido},email=#{email},sexo=#{sexo},idDireccion=#{iddireccion} 
+  nombre=#{nombre}, apellido=#{apellido},email=#{email},sexo=#{sexo},idDireccion=#{direccion.iddireccion} 
   WHERE id=#{id}
   </update>
   

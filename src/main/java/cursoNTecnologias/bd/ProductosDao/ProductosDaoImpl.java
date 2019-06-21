@@ -141,6 +141,12 @@ public class ProductosDaoImpl implements ProductosDao{
 		return null;
 	}
 
+	@Override
+	public Marcas obtenerMarcaPorId(Map<String, Integer> mapMarca) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 
 	@Override
 	public Marcas obtenerMarcaPorId(Map<String, Integer> mapMarca) {
