@@ -19,18 +19,17 @@
   </resultMap> 
   
   	<select id="queryAllVentas" resultMap="resultMapVentasClienteListaDetalleVentas">
-  		SELECT * FROM ventas as v
+  		SELECT idVenta, clienteId, totalVenta, fecha FROM ventas as v
   	</select>
   	
   	<select id="queryVentasByVentaId" resultMap="resultMapVentasClienteListaDetalleVentas" parameterType="Integer">
-  		SELECT * FROM ventas as v
-  		LEFT JOIN detalleventas as dv ON v.idVenta = dv.ventaId
+  		SELECT idVenta, clienteId, totalVenta, fecha FROM ventas as v
   		WHERE v.idVenta = #{id}
   	</select>
   
   	<select id="queryVentasByClienteId" resultMap="resultMapVentasClienteListaDetalleVentas" parameterType="Integer">
-  		SELECT * FROM ventas as v
-  		LEFT JOIN cliente as c ON v.clienteId = c.id
+  		SELECT idVenta, clienteId, totalVenta, fecha FROM ventas as v
+  		LEFT JOIN cliente as c ON v.id = c.id
   		WHERE v.idVenta = #{id}
   	</select>
   	

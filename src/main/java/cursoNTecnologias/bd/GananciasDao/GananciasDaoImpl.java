@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import cursoNTecnologias.bd.domain.Ganancias;
 import cursoNTecnologias.bd.mappers.GananciasMapper;
+import cursoNTecnologias.bd.mappers.VentasMapper;
 
 @Named
 public class GananciasDaoImpl implements GananciasDao, Serializable {
@@ -33,6 +34,8 @@ public class GananciasDaoImpl implements GananciasDao, Serializable {
 			System.out.println("\nqueryAllGanancias\n");
 			for (Ganancias g : list) {
 				System.out.println(g);
+				System.out.println("********Venta info:");
+				System.out.println(g.getVenta());
 			}
 		} catch (Exception e) {
 			System.out.println("Error en GananciasDaoImpl");
@@ -42,7 +45,7 @@ public class GananciasDaoImpl implements GananciasDao, Serializable {
 		
 	}
 
-	public List<Ganancias> queryGananciasByVentaId() {
+	public List<Ganancias> queryGananciasByVentaId(Integer id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -66,8 +69,13 @@ public class GananciasDaoImpl implements GananciasDao, Serializable {
 	 * Update
 	 */
 	public void updateGanancia(Ganancias ganancia) {
-		// TODO Auto-generated method stub
-		
+		try {
+			GananciasMapper gm = sqlSession.getMapper(GananciasMapper.class);
+			gm.updateGanancia(ganancia);
+		} catch (Exception e) {
+			System.out.println("Error en DAO->updateGanancia");
+			e.printStackTrace();
+		}
 	}
 	
 	/**

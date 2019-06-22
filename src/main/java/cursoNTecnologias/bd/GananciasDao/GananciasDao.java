@@ -9,7 +9,7 @@ public interface GananciasDao {
 	 * Consultas
 	 */
 	public List<Ganancias> queryAllGanancias();
-	public List<Ganancias> queryGananciasByVentaId();
+	public List<Ganancias> queryGananciasByVentaId(Integer id);
 	
 	/**
 	 * Insert

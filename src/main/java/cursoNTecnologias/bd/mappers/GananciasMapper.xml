@@ -14,13 +14,14 @@
     <result column="totalGanancia" jdbcType="DOUBLE" property="totalganancia" />
     <result column="fecha" jdbcType="DATE" property="fecha" />
     
-    <association property="venta" column="ventaId" resultMap="cursoNTecnologias.bd.mappers.ProductosMapper.resultMapVentasByClienteId" />
+    
+    <association property="venta" column="ventaId" 
+    javaType="cursoNTecnologias.bd.domain.Ventas"
+    select="cursoNTecnologias.bd.mappers.VentasMapper.queryVentasByVentaId"/>
   </resultMap>
   
-  <select id="queryAllGananciasVentas" resultMap="BaseResultMapGananciasVentas">
-	SELECT * FROM ganancias as g
-	INNER JOIN ventas as v
-	WHERE g.ventaid=v.idVenta
+  <select id="queryAllGanancias" resultMap="BaseResultMapGananciasVentas">
+	SELECT idGanancia, ventaId, totalGanancia, fecha FROM ganancias
   </select>
   
   <select id="queryGananciaByVentaId" resultMap="BaseResultMapGananciasVentas" parameterType="Integer">
@@ -35,6 +36,15 @@
 	(#{ventaid}, #{totalganancia})
   </insert>
   
+  <update id="updateGanancia" parameterType="cursoNTecnologias.bd.domain.Ganancias">
+  	UPDATE ganancias SET
+   		idGanancia = #{idganancia},
+    	ventaId = #{ventaid},
+    	totalGanancia = #{totalganancia},
+    	fecha = #{fecha}
+   	WHERE idGanancia = #{idganancia}
+  </update>
+    
   <delete id="deleteGanancia" parameterType="Integer">
   	DELETE FROM ganancias WHERE idGanancia = #{gananciaId}
   </delete>
